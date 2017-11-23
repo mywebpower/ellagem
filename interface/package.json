@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereum/mist.git"
+    "url": "git+https://github.com/ellaism/ellagem.git"
   },
   "keywords": [
     "ethereum",

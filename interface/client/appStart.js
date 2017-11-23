@@ -27,8 +27,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://ethereum.org',
-                redirect: 'https://ethereum.org',
+                url: 'https://board.ellaism.io',
+                redirect: 'https://board.ellaism.io',
                 position: 0
             });
         } else {
@@ -45,8 +45,8 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.ethereum.org',
-                    redirect: 'https://wallet.ethereum.org',
+                    url: 'https://wallet.ellaism.io',
+                    redirect: 'https://wallet.ellaism.io',
                     position: 1,
                     permissions: {
                         admin: true
