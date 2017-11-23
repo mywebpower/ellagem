@@ -106,16 +106,14 @@ class Manager extends EventEmitter {
             // prepare node info
             const platform = process.platform.replace('darwin', 'mac').replace('win32', 'win').replace('freebsd', 'linux').replace('sunos', 'linux');
             const binaryVersion = latestConfig.clients[nodeType].platforms[platform][process.arch];
-            const checksums = _.pick(binaryVersion.download, 'sha256', 'md5');
-            const algorithm = _.keys(checksums)[0].toUpperCase();
-            const hash = _.values(checksums)[0];
+            // const checksums = _.pick(binaryVersion.download, 'sha256', 'md5');
+            // const algorithm = _.keys(checksums)[0].toUpperCase();
+            // const hash = _.values(checksums)[0];
 
             // get the node data, to be able to pass it to a possible error
             nodeInfo = {
                 type: nodeType,
                 version: nodeVersion,
-                checksum: hash,
-                algorithm,
             };
 
 

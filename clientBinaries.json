@@ -8,7 +8,8 @@
                         "download": {
                             "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-win64.zip",
                             "type": "zip",
-                            "bin": "geth-ellaism-win64/geth.exe"
+                            "sha256": "B0FF0F47411D085D2238CE6383FAFCD63E0D8D20C764527E35535004F32684D1",
+                            "bin": "geth.exe"
                         },
                         "bin": "geth",
                         "commands": {
@@ -27,7 +28,8 @@
                         "download": {
                             "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-win64.zip",
                             "type": "zip",
-                            "bin": "geth-ellaism-win32/geth.exe"
+                            "sha256": "B0FF0F47411D085D2238CE6383FAFCD63E0D8D20C764527E35535004F32684D1",
+                            "bin": "geth.exe"
                         },
                         "bin": "geth",
                         "commands": {
@@ -48,7 +50,8 @@
                         "download": {
                             "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-linux.zip",
                             "type": "zip",
-                            "bin": "geth-ellaism-linux/geth"
+                            "sha256": "3646675f846302644357e5762703883dc27ae7d2e1f55ad00ca856fba3061077",
+                            "bin": "geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -69,7 +72,8 @@
                       "download": {
                           "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-linux.zip",
                           "type": "zip",
-                          "bin": "geth-ellaism-linux/geth"
+                          "sha256": "3646675f846302644357e5762703883dc27ae7d2e1f55ad00ca856fba3061077",
+                          "bin": "geth"
                       },
                       "bin": "geth",
                       "commands": {
@@ -88,7 +92,8 @@
                       "download": {
                           "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-linux.zip",
                           "type": "zip",
-                          "bin": "geth-ellaism-linux/geth"
+                          "sha256": "3646675f846302644357e5762703883dc27ae7d2e1f55ad00ca856fba3061077",
+                          "bin": "geth"
                       },
                       "bin": "geth",
                       "commands": {
