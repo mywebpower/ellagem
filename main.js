@@ -188,8 +188,8 @@ onReady = () => {
         }
     });
 
-    // check for update
-    if (!Settings.inAutoTestMode) UpdateChecker.run();
+    // // check for update
+    // if (!Settings.inAutoTestMode) UpdateChecker.run();
 
     // initialize the web3 IPC provider backend
     ipcProviderBackend.init();

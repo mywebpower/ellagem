@@ -6,14 +6,14 @@ const got = require('got');
 const path = require('path');
 const Settings = require('./settings');
 const Windows = require('./windows');
-const ClientBinaryManager = require('ethereum-client-binaries').Manager;
+const ClientBinaryManager = require('ellaism-client-binaries').Manager;
 const EventEmitter = require('events').EventEmitter;
 
 const log = require('./utils/logger').create('ClientBinaryManager');
 
 
 // should be       'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json'
-const BINARY_URL = 'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json';
+const BINARY_URL = 'https://raw.githubusercontent.com/ellaism/ellagem/develop/clientBinaries.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
     /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethereum\.org\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
@@ -215,7 +215,6 @@ class Manager extends EventEmitter {
 
                         return mgr.download(c.id, {
                             downloadFolder: path.join(Settings.userDataPath, 'binaries'),
-                            urlRegex: ALLOWED_DOWNLOAD_URLS_REGEX,
                         });
                     });
                 }

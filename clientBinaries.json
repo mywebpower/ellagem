@@ -1,15 +1,15 @@
 {
     "clients": {
         "Geth": {
-            "version": "1.7.2",
+            "version": "4.1.2",
             "platforms": {
-                "linux": {
+                "win": {
                     "x64": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.7.2-1db4ecdc.tar.gz",
-                            "type": "tar",
-                            "md5": "cc4a666fd21ae3627ee8ae974650b2f7",
-                            "bin": "geth-linux-amd64-1.7.2-1db4ecdc/geth"
+                            "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-win64.zip",
+                            "type": "zip",
+                            "sha256": "B0FF0F47411D085D2238CE6383FAFCD63E0D8D20C764527E35535004F32684D1",
+                            "bin": "geth-ellaism-win64/geth.exe"
                         },
                         "bin": "geth",
                         "commands": {
@@ -19,17 +19,17 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.7.2"
+                                    "4.1.2"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-linux-386-1.7.2-1db4ecdc.tar.gz",
-                            "type": "tar",
-                            "md5": "84b3a2d491db6f79fd84daa242da9ec6",
-                            "bin": "geth-linux-386-1.7.2-1db4ecdc/geth"
+                            "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-win64.zip",
+                            "type": "zip",
+                            "sha256": "B0FF0F47411D085D2238CE6383FAFCD63E0D8D20C764527E35535004F32684D1",
+                            "bin": "geth-ellaism-win32/geth.exe"
                         },
                         "bin": "geth",
                         "commands": {
@@ -39,7 +39,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.7.2"
+                                    "4.1.2"
                                 ]
                             }
                         }
@@ -48,10 +48,10 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-darwin-amd64-1.7.2-1db4ecdc.tar.gz",
-                            "type": "tar",
-                            "md5": "1220015825ee8772aada37353aa3f7ef",
-                            "bin": "geth-darwin-amd64-1.7.2-1db4ecdc/geth"
+                            "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-linux.zip",
+                            "type": "zip",
+                            "sha256": "3646675f846302644357e5762703883dc27ae7d2e1f55ad00ca856fba3061077",
+                            "bin": "geth-ellaism-linux/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -61,53 +61,53 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.7.2"
+                                    "4.1.2"
                                 ]
                             }
                         }
                     }
                 },
-                "win": {
-                    "x64": {
-                        "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.7.2-1db4ecdc.zip",
-                            "type": "zip",
-                            "md5": "b34d22226c2d8c6729b4c01a2f25f818",
-                            "bin": "geth-windows-amd64-1.7.2-1db4ecdc\\geth.exe"
-                        },
-                        "bin": "geth.exe",
-                        "commands": {
-                            "sanity": {
-                                "args": [
-                                    "version"
-                                ],
-                                "output": [
-                                    "Geth",
-                                    "1.7.2"
-                                ]
-                            }
-                        }
-                    },
-                    "ia32": {
-                        "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.7.2-1db4ecdc.zip",
-                            "type": "zip",
-                            "md5": "50b353bf3639a502b06e0098c751df67",
-                            "bin": "geth-windows-386-1.7.2-1db4ecdc\\geth.exe"
-                        },
-                        "bin": "geth.exe",
-                        "commands": {
-                            "sanity": {
-                                "args": [
-                                    "version"
-                                ],
-                                "output": [
-                                    "Geth",
-                                    "1.7.2"
-                                ]
-                            }
-                        }
-                    }
+                "linux": {
+                  "x64": {
+                      "download": {
+                          "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-linux.zip",
+                          "type": "zip",
+                          "sha256": "3646675f846302644357e5762703883dc27ae7d2e1f55ad00ca856fba3061077",
+                          "bin": "geth-ellaism-linux/geth"
+                      },
+                      "bin": "geth",
+                      "commands": {
+                          "sanity": {
+                              "args": [
+                                  "version"
+                              ],
+                              "output": [
+                                  "Geth",
+                                  "4.1.2"
+                              ]
+                          }
+                      }
+                  },
+                  "ia32": {
+                      "download": {
+                          "url": "https://github.com/ellaism/go-ellaism/releases/download/v4.1.2/geth-ellaism-linux.zip",
+                          "type": "zip",
+                          "sha256": "3646675f846302644357e5762703883dc27ae7d2e1f55ad00ca856fba3061077",
+                          "bin": "geth-ellaism-linux/geth"
+                      },
+                      "bin": "geth",
+                      "commands": {
+                          "sanity": {
+                              "args": [
+                                  "version"
+                              ],
+                              "output": [
+                                  "Geth",
+                                  "4.1.2"
+                              ]
+                          }
+                      }
+                  }
                 }
             }
         }
