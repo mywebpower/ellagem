@@ -96,7 +96,9 @@ notifications:
 deploy:
   provider: releases
   api_key: "21bbbed532182bf01ec56c1ed1cc0ec214a44cc5"
-  file: "Mist-win32-0-9-3.zip"
+  file: "Mist-$TRAVIS_OS_NAME-0-9-3.*"
   skip_cleanup: true
+  draft: true
   on:
+    repo: ellaism-io/ellagem
     tags: true
