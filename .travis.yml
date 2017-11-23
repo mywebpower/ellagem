@@ -1,11 +1,6 @@
 language: node_js
 sudo: required
 
-branches:
-  only:
-    - develop
-    - master
-
 matrix:
   include:
 
@@ -102,3 +97,4 @@ deploy:
   on:
     repo: ellaism-io/ellagem
     tags: true
+    all_branches: true
