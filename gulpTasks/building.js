@@ -13,7 +13,7 @@ const version = require('../package.json').version;
 
 
 const type = options.type;
-const applicationName = (options.wallet) ? 'Ellaism Wallet' : 'Ellagem';
+const applicationName = (options.wallet) ? 'Ethereum Wallet' : 'Mist';
 
 
 gulp.task('clean-dist', (cb) => {
