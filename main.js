@@ -206,8 +206,8 @@ onReady = () => {
     // Create the browser window.
 
     const defaultWindow = windowStateKeeper({
-        defaultWidth: 1024 + 208,
-        defaultHeight: 720
+        defaultWidth: 1324 + 208,
+        defaultHeight: 920
     });
 
     // MIST
@@ -312,20 +312,20 @@ onReady = () => {
             );
         });
 
-        // starting swarm
-        swarmNode.on('starting', () => {
-            Windows.broadcast('uiAction_swarmStatus', 'starting');
-        });
-
-        // swarm download progress
-        swarmNode.on('downloadProgress', (progress) => {
-            Windows.broadcast('uiAction_swarmStatus', 'downloadProgress', progress);
-        });
-
-        // started swarm
-        swarmNode.on('started', (isLocal) => {
-            Windows.broadcast('uiAction_swarmStatus', 'started', isLocal);
-        });
+        // // starting swarm
+        // swarmNode.on('starting', () => {
+        //     Windows.broadcast('uiAction_swarmStatus', 'starting');
+        // });
+        //
+        // // swarm download progress
+        // swarmNode.on('downloadProgress', (progress) => {
+        //     Windows.broadcast('uiAction_swarmStatus', 'downloadProgress', progress);
+        // });
+        //
+        // // started swarm
+        // swarmNode.on('started', (isLocal) => {
+        //     Windows.broadcast('uiAction_swarmStatus', 'started', isLocal);
+        // });
 
 
         // capture sync results
@@ -376,13 +376,13 @@ onReady = () => {
         .then(() => {
             return ethereumNode.init();
         })
-        .then(() => {
-            // Wallet shouldn't start Swarm
-            if (Settings.uiMode === 'wallet') {
-                return Promise.resolve();
-            }
-            return swarmNode.init();
-        })
+        // .then(() => {
+        //     // Wallet shouldn't start Swarm
+        //     if (Settings.uiMode === 'wallet') {
+        //         return Promise.resolve();
+        //     }
+        //     return swarmNode.init();
+        // })
         .then(function sanityCheck() {
             if (!ethereumNode.isIpcConnected) {
                 throw new Error('Either the node didn\'t start or IPC socket failed to connect.');

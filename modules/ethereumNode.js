@@ -386,31 +386,31 @@ class EthereumNode extends EventEmitter {
                         '--ipcpath', Settings.rpcIpcPath
                     ];
                     break;
-
-                // Starts Rinkeby network
-                case 'rinkeby':
-                    args = [
-                        '--rinkeby',
-                        '--syncmode', syncMode,
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--ipcpath', Settings.rpcIpcPath
-                    ];
-                    break;
-
-                // Starts local network
-                case 'dev':
-                    args = [
-                        '--dev',
-                        '--minerthreads', '1',
-                        '--ipcpath', Settings.rpcIpcPath
-                    ];
-                    break;
+                //
+                // // Starts Rinkeby network
+                // case 'rinkeby':
+                //     args = [
+                //         '--rinkeby',
+                //         '--syncmode', syncMode,
+                //         '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                //         '--ipcpath', Settings.rpcIpcPath
+                //     ];
+                //     break;
+                //
+                // // Starts local network
+                // case 'dev':
+                //     args = [
+                //         '--dev',
+                //         '--minerthreads', '1',
+                //         '--ipcpath', Settings.rpcIpcPath
+                //     ];
+                //     break;
 
                 // Starts Main net
                 default:
                     args = (nodeType === 'geth')
                         ? [
-                            '--syncmode', syncMode,
+                            '--fast',
                             '--cache', ((process.arch === 'x64') ? '1024' : '512')
                         ]
                         : ['--unsafe-transactions'];

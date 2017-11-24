@@ -140,8 +140,8 @@ class Manager extends EventEmitter {
                             uiAction_sendData: {
                                 name: nodeType,
                                 version: nodeVersion,
-                                checksum: `${algorithm}: ${hash}`,
-                                downloadUrl: binaryVersion.download.url,
+                                // checksum: `${algorithm}: ${hash}`,
+                                // downloadUrl: binaryVersion.download.url,
                                 restart,
                             },
                         },
