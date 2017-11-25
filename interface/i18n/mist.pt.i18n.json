@@ -2,15 +2,15 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Sobre __app__",
+                "label": "Ellagem",
+                "about": "Sobre Ellagem",
                 "checkForUpdates": "Procurar Atualizações...",
                 "checkForNodeUpdates": "Check for Ethereum node updates...",
                 "services": "Serviços",
-                "hide": "Ocultar o __app__",
+                "hide": "Ocultar o Ellagem",
                 "hideOthers": "Ocultar Outros",
                 "showAll": "Mostrar Todos",
-                "quit": "Fechar __app__"
+                "quit": "Fechar Ellagem"
             },
             "file": {
                 "label": "Arquivos",

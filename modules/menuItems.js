@@ -97,7 +97,7 @@ let menuTempl = function (webviews) {
                     Windows.createPopup('about', {
                         electronOptions: {
                             width: 420,
-                            height: 230,
+                            height: 330,
                             alwaysOnTop: true,
                         },
                     });
@@ -211,7 +211,7 @@ let menuTempl = function (webviews) {
                             // geth
                             } else {
                                 if (process.platform === 'darwin') {
-                                    userPath += '/Library/Ethereum/keystore';
+                                    userPath += '/Library/Ellaism/mainnet/keystore';
                                 }
 
                                 if (process.platform === 'freebsd' ||
@@ -221,7 +221,7 @@ let menuTempl = function (webviews) {
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\ellaism\\mainnet\\keystore`;
                                 }
                             }
 
@@ -234,38 +234,6 @@ let menuTempl = function (webviews) {
                         },
                     },
                 ],
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.file.swarmUpload'),
-                accelerator: 'Shift+CommandOrControl+U',
-                click() {
-                    const focusedWindow = BrowserWindow.getFocusedWindow();
-                    const paths = dialog.showOpenDialog(focusedWindow, {
-                        properties: ['openFile', 'openDirectory']
-                    });
-                    if (paths && paths.length === 1) {
-                        const isDir = fs.lstatSync(paths[0]).isDirectory();
-                        const defaultPath = path.join(paths[0], 'index.html');
-                        const uploadConfig = {
-                            path: paths[0],
-                            kind: isDir ? 'directory' : 'file',
-                            defaultFile: fs.existsSync(defaultPath) ? '/index.html' : null
-                        };
-                        swarmNode.upload(uploadConfig).then((hash) => {
-                            focusedWindow.webContents.executeJavaScript(`
-                              Tabs.update('browser', {$set: {
-                                  url: 'bzz://${hash}',
-                                  redirect: 'bzz://${hash}'
-                              }});
-                              LocalStore.set('selectedTab', 'browser');
-                            `);
-                            console.log('Hash uploaded:', hash);
-                        }).catch(e => console.log(e));
-                    }
-                }
             }]
     });
 

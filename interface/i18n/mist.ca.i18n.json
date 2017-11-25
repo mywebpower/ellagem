@@ -2,15 +2,15 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Sobre __app__",
+                "label": "Ellagem",
+                "about": "Sobre Ellagem",
                 "checkForUpdates": "Buscar actualitzacions...",
                 "checkForNodeUpdates": "Busca actualitzacions dels nodes d'Ethereum...",
                 "services": "Serveis",
-                "hide": "Hide __app__",
+                "hide": "Hide Ellagem",
                 "hideOthers": "Ocultar els altres",
                 "showAll": "Mostrar tot",
-                "quit": "Sortir __app__"
+                "quit": "Sortir Ellagem"
             },
             "file": {
                 "label": "Fitxer",

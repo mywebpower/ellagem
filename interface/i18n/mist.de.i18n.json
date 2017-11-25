@@ -2,15 +2,15 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Über __app__",
+                "label": "Ellagem",
+                "about": "Über Ellagem",
                 "checkForUpdates": "Nach Aktualisierungen suchen...",
                 "checkForNodeUpdates": "Nach Ethereum Softwareknoten Aktualisierungen suchen...",
                 "services": "Dienste",
-                "hide": "__app__ ausblenden",
+                "hide": "Ellagem ausblenden",
                 "hideOthers": "Andere ausblenden",
                 "showAll": "Alle einblenden",
-                "quit": "__app__ schließen"
+                "quit": "Ellagem schließen"
             },
             "edit": {
                 "label": "Bearbeiten",

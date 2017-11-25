@@ -2,15 +2,15 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Rreth __app__",
+                "label": "Ellagem",
+                "about": "Rreth Ellagem",
                 "checkForUpdates": "Kërko për përditësime...",
                 "checkForNodeUpdates": "Kërko për përditësime të nyjes Ethereum...",
                 "services": "Shërbime",
-                "hide": "Fshih __app__",
+                "hide": "Fshih Ellagem",
                 "hideOthers": "Fshih të tjerat",
                 "showAll": "Shfaq të gjitha",
-                "quit": "Dil nga __app__"
+                "quit": "Dil nga Ellagem"
             },
             "file": {
                 "label": "Llogari",

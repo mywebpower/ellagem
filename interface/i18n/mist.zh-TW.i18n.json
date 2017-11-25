@@ -2,15 +2,15 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "關於__app__",
+                "label": "Ellagem",
+                "about": "關於Ellagem",
                 "checkForUpdates": "檢查更新...",
                 "checkForNodeUpdates": "Check for Ethereum node updates...",
                 "services": "服務",
-                "hide": "隱藏 __app__",
+                "hide": "隱藏 Ellagem",
                 "hideOthers": "隱藏其他",
                 "showAll": "顯示全部",
-                "quit": "退出__app__"
+                "quit": "退出Ellagem"
             },
             "edit": {
                 "label": "編輯",
