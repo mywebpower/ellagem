@@ -221,7 +221,8 @@ let menuTempl = function (webviews) {
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\ellaism\\mainnet\\keystore`;
+                                    //userPath = `${Settings.appDataPath}\\ellaism\\mainnet\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\Parity\\Ethereum\\keys\\ellaism`;
                                 }
                             }
 
