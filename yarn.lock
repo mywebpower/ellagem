@@ -1716,6 +1716,19 @@ electron@1.7.9:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
 
+ellaism-client-binaries@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ellaism-client-binaries/-/ellaism-client-binaries-1.0.0.tgz#15cda1fdeca485f096d453cf6b5a8edb2675964c"
+  dependencies:
+    buffered-spawn "^3.3.2"
+    got "^6.5.0"
+    lodash.get "^4.4.2"
+    lodash.isempty "^4.4.0"
+    lodash.values "^4.3.0"
+    mkdirp "^0.5.1"
+    node-unzip-2 "^0.2.1"
+    tmp "0.0.29"
+
 elliptic@^6.2.3, elliptic@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.4.0.tgz#cac9af8762c85836187003c8dfe193e5e2eae5df"
