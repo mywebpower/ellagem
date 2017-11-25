@@ -2,10 +2,10 @@
   "name": "Ellagem",
   "version": "0.0.1",
   "license": "GPL-3.0",
-  "author": "Ellaism Community <foreignfive@gmail.com>",
+  "author": "Ellaism Community <dfmpay87@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ellaism/ellagem.git"
+    "url": "https://github.com/ellaism-io/ellagem.git"
   },
   "scripts": {
     "postinstall": "cd interface && yarn",
