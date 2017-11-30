@@ -4,7 +4,7 @@ The init function of Mist
 @method mistInit
 */
 mistInit = function () {
-    console.info('Initialise Mist Interface');
+    console.info('Initialise Ellagem Interface');
 
     EthBlocks.init();
     const ethBlocksInterval = setInterval(() => {
@@ -27,8 +27,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://board.ellaism.io',
-                redirect: 'https://board.ellaism.io',
+                url: 'https://ellaism.io',
+                redirect: 'https://ellaism.io',
                 position: 0
             });
         } else {
@@ -52,7 +52,8 @@ mistInit = function () {
                         admin: true
                     }
                 }
-            });
+            }
+          );
 
         // Sets browser as default tab if:
         // 1) there's no record of selected tab
