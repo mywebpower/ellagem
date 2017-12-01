@@ -66,6 +66,14 @@ const argv = require('yargs')
             type: 'string',
             group: 'Mist options:',
         },
+        paritypath: {
+            demand: false,
+            describe: 'Path to Parity executable to use instead of default.',
+            requiresArg: true,
+            nargs: 1,
+            type: 'string',
+            group: 'Mist options:',
+        },
         gethpath: {
             demand: false,
             describe: 'Path to Geth executable to use instead of default.',

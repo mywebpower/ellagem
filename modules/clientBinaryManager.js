@@ -48,7 +48,7 @@ class Manager extends EventEmitter {
     }
 
     _checkForNewConfig(restart) {
-        const nodeType = 'Geth';
+        const nodeType = 'Parity';
         let binariesDownloaded = false;
         let nodeInfo;
 
@@ -193,6 +193,7 @@ class Manager extends EventEmitter {
             return mgr.init({
                 folders: [
                     path.join(Settings.userDataPath, 'binaries', 'Geth', 'unpacked'),
+                    path.join(Settings.userDataPath, 'binaries', 'Parity', 'unpacked'),
                     path.join(Settings.userDataPath, 'binaries', 'Eth', 'unpacked'),
                 ],
             })

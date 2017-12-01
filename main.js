@@ -388,7 +388,7 @@ onReady = () => {
                 throw new Error('Either the node didn\'t start or IPC socket failed to connect.');
             }
 
-            /* At this point Geth is running and the socket is connected. */
+            /* At this point Geth/Parity is running and the socket is connected. */
             log.info('Connected via IPC to node.');
 
             // update menu, to show node switching possibilities

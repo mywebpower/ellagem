@@ -126,7 +126,7 @@
                         "commands": {
                             "sanity": {
                                 "args": [
-                                    "version"
+                                    "--version"
                                 ],
                                 "output": [
                                     "Parity",
@@ -146,7 +146,7 @@
                         "commands": {
                             "sanity": {
                                 "args": [
-                                    "version"
+                                    "--version"
                                 ],
                                 "output": [
                                     "Parity",
@@ -168,7 +168,7 @@
                         "commands": {
                             "sanity": {
                                 "args": [
-                                    "version"
+                                    "--version"
                                 ],
                                 "output": [
                                     "Parity",
@@ -190,7 +190,7 @@
                       "commands": {
                           "sanity": {
                               "args": [
-                                  "version"
+                                  "--version"
                               ],
                               "output": [
                                   "Parity",
@@ -210,7 +210,7 @@
                       "commands": {
                           "sanity": {
                               "args": [
-                                  "version"
+                                  "--version"
                               ],
                               "output": [
                                   "Parity",
