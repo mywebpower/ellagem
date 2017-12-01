@@ -379,44 +379,48 @@ class EthereumNode extends EventEmitter {
 
                 let args;
 
+                if(nodeType === 'parity'){
                 switch (network) {
+                  // Starts Ellaism test network
+                  case 'test':
+                      args = [
+                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                        '--chain', 'C:\\Program Files\\Ellagem\\ellaismtestnet.json',
+                        '--geth',
+                        '--rpc'
+                      ];
+                      break;
 
-                // Starts Ellaism test network
-                case 'test':
-                    args = [
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512')
-                    ];
-                    break;
-                //
-                // // Starts Rinkeby network
-                // case 'rinkeby':
-                //     args = [
-                //         '--rinkeby',
-                //         '--syncmode', syncMode,
-                //         '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                //         '--ipcpath', Settings.rpcIpcPath
-                //     ];
-                //     break;
-                //
-                // // Starts local network
-                // case 'dev':
-                //     args = [
-                //         '--dev',
-                //         '--minerthreads', '1',
-                //         '--ipcpath', Settings.rpcIpcPath
-                //     ];
-                //     break;
+                  // Starts Main net
+                  default:
+                      args = (nodeType === 'parity')
+                          ? [
+                              '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                              '--chain', 'C:\\Program Files\\Ellagem\\ellaism.json',
+                              '--geth'
+                          ]
+                          : ['--unsafe-transactions'];
+                  }
 
-                // Starts Main net
-                default:
-                    args = (nodeType === 'parity')
-                        ? [
-                            '--fast',
-                            '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                            '--chain', 'C:\\test\\ellaism.json'
-                        ]
-                        : ['--unsafe-transactions'];
+                } else {
+                  switch (network) {
+                    // Starts Ellaism test network
+                    case 'test':
+                        args = [
+                          '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                        ];
+                        break;
+
+                    // Starts Main net
+                    default:
+                        args = (nodeType === 'geth')
+                            ? [
+                                '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                            ]
+                            : ['--unsafe-transactions'];
+                    }
                 }
+
 
                 const nodeOptions = Settings.nodeOptions;
 

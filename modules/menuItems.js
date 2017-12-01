@@ -201,15 +201,15 @@ let menuTempl = function (webviews) {
                             let userPath = Settings.userHomePath;
 
                             // eth
-                            if (ethereumNode.isEth) {
+                          if (ethereumNode.isEth) {
                                 if (process.platform === 'win32') {
                                     userPath = `${Settings.appDataPath}\\Web3\\keys`;
                                 } else {
                                     userPath += '/.web3/keys';
                                 }
 
-                            // geth
-                            } else {
+                            // parity
+                          } else if (ethereumNode.isParity) {
                                 if (process.platform === 'darwin') {
                                     userPath += '/Library/Ellaism/mainnet/keystore';
                                 }
@@ -224,7 +224,23 @@ let menuTempl = function (webviews) {
                                     //userPath = `${Settings.appDataPath}\\ellaism\\mainnet\\keystore`;
                                     userPath = `${Settings.appDataPath}\\Parity\\Ethereum\\keys\\ellaism`;
                                 }
-                            }
+                            //geth once it works.
+                          } else {
+                                if (process.platform === 'darwin') {
+                                    userPath += '/Library/Ellaism/mainnet/keystore';
+                                }
+
+                                if (process.platform === 'freebsd' ||
+                                process.platform === 'linux' ||
+                                process.platform === 'sunos') {
+                                    userPath += '/.ellaism/mainnet/keystore';
+                                }
+
+                                if (process.platform === 'win32') {
+                                    userPath = `${Settings.appDataPath}\\ellaism\\mainnet\\keystore`;
+                                    //userPath = `${Settings.appDataPath}\\Parity\\Ethereum\\keys\\ellaism`;
+                                }
+                          }
 
                             shell.showItemInFolder(userPath);
                         },
@@ -421,13 +437,13 @@ let menuTempl = function (webviews) {
         });
     }
 
-    devToolsMenu.push({
-        label: i18n.t('mist.applicationMenu.develop.runTests'),
-        enabled: (Settings.uiMode === 'mist'),
-        click() {
-            Windows.getByType('main').send('uiAction_runTests', 'webview');
-        },
-    });
+    // devToolsMenu.push({
+    //     label: i18n.t('mist.applicationMenu.develop.runTests'),
+    //     enabled: (Settings.uiMode === 'mist'),
+    //     click() {
+    //         Windows.getByType('main').send('uiAction_runTests', 'webview');
+    //     },
+    // });
 
     devToolsMenu.push({
         label: i18n.t('mist.applicationMenu.develop.logFiles') + externalNodeMsg,
@@ -457,7 +473,7 @@ let menuTempl = function (webviews) {
 
         if (parityClient) {
             nodeSubmenu.push({
-                label: `Parity ${gethClient.version}`,
+                label: `Parity ${parityClient.version}`,
                 checked: ethereumNode.isOwnNode && ethereumNode.isParity,
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
@@ -467,32 +483,34 @@ let menuTempl = function (webviews) {
             });
         }
 
-        if (gethClient) {
-            nodeSubmenu.push({
-                label: `Geth ${gethClient.version}`,
-                checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
-                enabled: ethereumNode.isOwnNode,
-                type: 'checkbox',
-                click() {
-                    restartNode('geth', null, 'fast', webviews);
-                },
-            });
-        }
+        // GETH NEEDS WORK / NO TESTNET YET EITHER
+        // if (gethClient) {
+        //     nodeSubmenu.push({
+        //         label: `Geth ${gethClient.version}`,
+        //         checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
+        //         enabled: ethereumNode.isOwnNode,
+        //         type: 'checkbox',
+        //         click() {
+        //             restartNode('geth', null, 'fast', webviews);
+        //         },
+        //     });
+        // }
 
-        if (ethClient) {
-            nodeSubmenu.push(
-                {
-                    label: `Eth ${ethClient.version} (C++)`,
-                    checked: ethereumNode.isOwnNode && ethereumNode.isEth,
-                    enabled: ethereumNode.isOwnNode,
-                    // enabled: false,
-                    type: 'checkbox',
-                    click() {
-                        restartNode('eth');
-                    },
-                }
-            );
-        }
+        // NO ETH NODE
+        // if (ethClient) {
+        //     nodeSubmenu.push(
+        //         {
+        //             label: `Eth ${ethClient.version} (C++)`,
+        //             checked: ethereumNode.isOwnNode && ethereumNode.isEth,
+        //             enabled: ethereumNode.isOwnNode,
+        //             // enabled: false,
+        //             type: 'checkbox',
+        //             click() {
+        //                 restartNode('eth');
+        //             },
+        //         }
+        //     );
+        // }
 
         devToolsMenu.push({
             label: i18n.t('mist.applicationMenu.develop.ethereumNode'),
@@ -540,20 +558,20 @@ let menuTempl = function (webviews) {
     // }
 
     // Enables mining menu: only in Solo mode and Ropsten network (testnet)
-    if (ethereumNode.isOwnNode && (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)) {
-        devToolsMenu.push({
-            label: (global.mining) ? i18n.t('mist.applicationMenu.develop.stopMining') : i18n.t('mist.applicationMenu.develop.startMining'),
-            accelerator: 'CommandOrControl+Shift+M',
-            enabled: true,
-            click() {
-                if (global.mining) {
-                    stopMining(webviews);
-                } else {
-                    startMining(webviews);
-                }
-            }
-        });
-    }
+    // if (ethereumNode.isOwnNode && (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)) {
+    //     devToolsMenu.push({
+    //         label: (global.mining) ? i18n.t('mist.applicationMenu.develop.stopMining') : i18n.t('mist.applicationMenu.develop.startMining'),
+    //         accelerator: 'CommandOrControl+Shift+M',
+    //         enabled: true,
+    //         click() {
+    //             if (global.mining) {
+    //                 stopMining(webviews);
+    //             } else {
+    //                 startMining(webviews);
+    //             }
+    //         }
+    //     });
+    // }
 
     menu.push({
         label: ((global.mining) ? '⛏ ' : '') + i18n.t('mist.applicationMenu.develop.label'),

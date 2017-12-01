@@ -27,8 +27,8 @@ RequestExecutionLevel admin
 
 !searchreplace APPNAMENOHYPEN ${APPNAME} "-" " "
 !define GROUPNAME "Ellaism.io"
-!define HELPURL "https://github.com/ellaism/ellagem/releases/issues"
-!define UPDATEURL "https://github.com/ellaism/ellagem/releases"
+!define HELPURL "https://github.com/ellaism-io/ellagem/releases/issues"
+!define UPDATEURL "https://github.com/ellaism-io/ellagem/releases"
 !define ABOUTURL "https://ellaism.io"
 !define /date NOW "%Y%m%d"
 
@@ -65,7 +65,7 @@ ${EndIf}
 
     SetShellVarContext current
     StrCpy $DATADIR "$APPDATA\${APPNAME}"
-    StrCpy $NODEDATADIR "$APPDATA\Ethereum"
+    StrCpy $NODEDATADIR "$APPDATA\Parity\Ethereum"
     StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAMENOHYPEN}"
     StrCpy $DESKTOPDIR "$DESKTOP"
 
