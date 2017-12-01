@@ -178,18 +178,6 @@ let menuTempl = function (webviews) {
                 },
             },
             {
-                label: i18n.t('mist.applicationMenu.file.importPresale'),
-                accelerator: 'CommandOrControl+I',
-                enabled: ethereumNode.isMainNetwork,
-                click() {
-                    Windows.createPopup('importAccount', {
-                        electronOptions: {
-                            width: 600, height: 370, alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-            {
                 type: 'separator',
             },
             {
