@@ -453,6 +453,19 @@ let menuTempl = function (webviews) {
 
         const ethClient = ClientBinaryManager.getClient('eth');
         const gethClient = ClientBinaryManager.getClient('geth');
+        const parityClient = ClientBinaryManager.getClient('parity');
+
+        if (parityClient) {
+            nodeSubmenu.push({
+                label: `Parity ${gethClient.version}`,
+                checked: ethereumNode.isOwnNode && ethereumNode.isParity,
+                enabled: ethereumNode.isOwnNode,
+                type: 'checkbox',
+                click() {
+                    restartNode('parity', null, 'fast', webviews);
+                },
+            });
+        }
 
         if (gethClient) {
             nodeSubmenu.push({
@@ -487,51 +500,31 @@ let menuTempl = function (webviews) {
         });
     }
 
-    // // add network switch
-    // devToolsMenu.push({
-    //     label: i18n.t('mist.applicationMenu.develop.network'),
-    //     submenu: [
-    //         {
-    //             label: i18n.t('mist.applicationMenu.develop.mainNetwork'),
-    //             accelerator: 'CommandOrControl+Alt+1',
-    //             checked: ethereumNode.isOwnNode && ethereumNode.isMainNetwork,
-    //             enabled: ethereumNode.isOwnNode,
-    //             type: 'checkbox',
-    //             click() {
-    //                 restartNode(ethereumNode.type, 'main');
-    //             },
-    //         },
-    //         {
-    //             label: 'Ropsten - Test network',
-    //             accelerator: 'CommandOrControl+Alt+2',
-    //             checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
-    //             enabled: ethereumNode.isOwnNode,
-    //             type: 'checkbox',
-    //             click() {
-    //                 restartNode(ethereumNode.type, 'test');
-    //             },
-    //         },
-    //         {
-    //             label: 'Rinkeby - Test network',
-    //             accelerator: 'CommandOrControl+Alt+3',
-    //             checked: ethereumNode.isOwnNode && ethereumNode.network === 'rinkeby',
-    //             enabled: ethereumNode.isOwnNode,
-    //             type: 'checkbox',
-    //             click() {
-    //                 restartNode(ethereumNode.type, 'rinkeby');
-    //             },
-    //         },
-    //         {
-    //             label: 'Solo network',
-    //             accelerator: 'CommandOrControl+Alt+4',
-    //             checked: ethereumNode.isOwnNode && ethereumNode.isDevNetwork,
-    //             enabled: ethereumNode.isOwnNode,
-    //             type: 'checkbox',
-    //             click() {
-    //                 restartNode(ethereumNode.type, 'dev');
-    //             },
-    //         }
-    //     ] });
+    // add network switch
+    devToolsMenu.push({
+        label: i18n.t('mist.applicationMenu.develop.network'),
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.develop.mainNetwork'),
+                accelerator: 'CommandOrControl+Alt+1',
+                checked: ethereumNode.isOwnNode && ethereumNode.isMainNetwork,
+                enabled: ethereumNode.isOwnNode,
+                type: 'checkbox',
+                click() {
+                    restartNode(ethereumNode.type, 'main');
+                },
+            },
+            {
+                label: 'Ellaism.io - Test network',
+                accelerator: 'CommandOrControl+Alt+2',
+                checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
+                enabled: ethereumNode.isOwnNode,
+                type: 'checkbox',
+                click() {
+                    restartNode(ethereumNode.type, 'test');
+                },
+            }
+        ] });
 
     // // Light mode switch should appear when not in Solo Mode (dev network)
     // if (ethereumNode.isOwnNode && ethereumNode.isGeth && !ethereumNode.isDevNetwork) {

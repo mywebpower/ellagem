@@ -206,7 +206,7 @@ onReady = () => {
     // Create the browser window.
 
     const defaultWindow = windowStateKeeper({
-        defaultWidth: 1324 + 208,
+        defaultWidth: 1424 + 208,
         defaultHeight: 920
     });
 

@@ -11,7 +11,7 @@ const EventEmitter = require('events').EventEmitter;
 const Sockets = require('./socketManager');
 const ClientBinaryManager = require('./clientBinaryManager');
 
-const DEFAULT_NODE_TYPE = 'geth';
+const DEFAULT_NODE_TYPE = 'parity';
 const DEFAULT_NETWORK = 'main';
 const DEFAULT_SYNCMODE = 'fast';
 
@@ -78,6 +78,10 @@ class EthereumNode extends EventEmitter {
 
     get isGeth() {
         return this._type === 'geth';
+    }
+
+    get isParity() {
+        return this._type === 'parity';
     }
 
     get isMainNetwork() {
@@ -377,13 +381,10 @@ class EthereumNode extends EventEmitter {
 
                 switch (network) {
 
-                // Starts Ropsten network
+                // Starts Ellaism test network
                 case 'test':
                     args = [
-                        '--testnet',
-                        '--syncmode', syncMode,
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--ipcpath', Settings.rpcIpcPath
+                        '--cache', ((process.arch === 'x64') ? '1024' : '512')
                     ];
                     break;
                 //
@@ -408,10 +409,11 @@ class EthereumNode extends EventEmitter {
 
                 // Starts Main net
                 default:
-                    args = (nodeType === 'geth')
+                    args = (nodeType === 'parity')
                         ? [
                             '--fast',
-                            '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                            '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                            '--chain', 'C:\\test\\ellaism.json'
                         ]
                         : ['--unsafe-transactions'];
                 }

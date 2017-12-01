@@ -232,6 +232,10 @@ class Settings {
         return argv.gethpath;
     }
 
+    get parityPath() {
+        return argv.paritypath;
+    }
+
     get ethPath() {
         return argv.ethpath;
     }
