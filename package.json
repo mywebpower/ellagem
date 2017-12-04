@@ -1,8 +1,8 @@
 {
   "name": "Ellagem",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "GPL-3.0",
-  "author": "Ellaism Community <dfmpay87@gmail.com>",
+  "author": "Ellaism.io Community <dfmpay87@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ellaism-io/ellagem.git"

@@ -13,11 +13,11 @@
                 "quit": "Quit Ellagem"
             },
             "file": {
-                "label": "File",
+                "label": "Accounts",
                 "importPresale": "Import accounts",
                 "newAccount": "New account",
                 "backup": "Backup",
-                "backupKeyStore": "Accounts",
+                "backupKeyStore": "Key Files",
                 "backupMist": "Application data",
                 "swarmUpload": "Upload to Swarm..."
             },
@@ -83,7 +83,22 @@
                 "label": "Help",
                 "mistWiki": "Troubleshooting and Help",
                 "gitter": "Mist channel on Gitter",
-                "reportBug": "Report an issue on Github"
+                "reportBug": "Report an issue on Github",
+                "learnmore": "Learn more about ellaism"
+            },
+            "community": {
+                "label": "Community",
+                "voting": "Carbon Voting",
+                "boards": "Message Boards",
+                "twitter": "Tweet Us",
+                "pools": "Mining Pools",
+                "marketinfo": "Market Info",
+                "coinprice": "Coin Price"
+            },
+            "exchanges": {
+                "label": "Exchanges",
+                "stocks": "Stocks.Exchange",
+                "bisq": "Bisq P2P Exchange"
             }
         },
         "errors": {

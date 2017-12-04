@@ -161,7 +161,72 @@ let menuTempl = function (webviews) {
         label: i18n.t('mist.applicationMenu.app.label', { app: Settings.appName }),
         submenu: fileMenu,
     });
-
+    // Community
+    menu.push({
+        label: i18n.t('mist.applicationMenu.community.label'),
+        submenu: [
+          {
+              label: i18n.t('mist.applicationMenu.community.voting'),
+              click() {
+                  shell.openExternal('https://vote.ellaism.io');
+              },
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.boards'),
+              click() {
+                  shell.openExternal('https://board.ellaism.io');
+              },
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.pools'),
+              click() {
+                  shell.openExternal('https://minerpool.net/pools/ellaism/');
+              },
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.twitter'),
+              click() {
+                  shell.openExternal('https://twitter.com/EllaismCoin');
+              },
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.marketinfo'),
+              click() {
+                  shell.openExternal('https://coinmarketcap.com/currencies/ellaism/');
+              },
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.coinprice'),
+              click() {
+                  Windows.createPopup('coinprice', {
+                      electronOptions: {
+                          width: 520,
+                          height: 330,
+                          alwaysOnTop: true,
+                      },
+                  });
+              },
+          },
+        ],
+    });
+    // Exchanges
+    menu.push({
+        label: i18n.t('mist.applicationMenu.exchanges.label'),
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.exchanges.stocks'),
+                click() {
+                    shell.openExternal('https://stocks.exchange/trade/ELLA/BTC');
+                },
+            },
+            {
+                label: i18n.t('mist.applicationMenu.exchanges.bisq'),
+                click() {
+                    shell.openExternal('https://bisq.network/');
+                },
+            },
+        ],
+    });
     // ACCOUNTS
     menu.push({
         label: i18n.t('mist.applicationMenu.file.label'),
@@ -242,45 +307,45 @@ let menuTempl = function (webviews) {
             }]
     });
 
-    // EDIT
-    menu.push({
-        label: i18n.t('mist.applicationMenu.edit.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.edit.undo'),
-                accelerator: 'CommandOrControl+Z',
-                role: 'undo',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.redo'),
-                accelerator: 'Shift+CommandOrControl+Z',
-                role: 'redo',
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.cut'),
-                accelerator: 'CommandOrControl+X',
-                role: 'cut',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.copy'),
-                accelerator: 'CommandOrControl+C',
-                role: 'copy',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.paste'),
-                accelerator: 'CommandOrControl+V',
-                role: 'paste',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.selectAll'),
-                accelerator: 'CommandOrControl+A',
-                role: 'selectall',
-            },
-        ],
-    });
+    // // EDIT
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.edit.label'),
+    //     submenu: [
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.undo'),
+    //             accelerator: 'CommandOrControl+Z',
+    //             role: 'undo',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.redo'),
+    //             accelerator: 'Shift+CommandOrControl+Z',
+    //             role: 'redo',
+    //         },
+    //         {
+    //             type: 'separator',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.cut'),
+    //             accelerator: 'CommandOrControl+X',
+    //             role: 'cut',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.copy'),
+    //             accelerator: 'CommandOrControl+C',
+    //             role: 'copy',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.paste'),
+    //             accelerator: 'CommandOrControl+V',
+    //             role: 'paste',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.selectAll'),
+    //             accelerator: 'CommandOrControl+A',
+    //             role: 'selectall',
+    //         },
+    //     ],
+    // });
 
     // LANGUAGE (VIEW)
     const switchLang = langCode => function (menuItem, browserWindow) {
@@ -330,30 +395,6 @@ let menuTempl = function (webviews) {
     }, {
         type: 'separator',
     });
-
-    // VIEW
-    menu.push({
-        label: i18n.t('mist.applicationMenu.view.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.view.fullscreen'),
-                accelerator: switchForSystem({
-                    darwin: 'Command+Control+F',
-                    default: 'F11',
-                }),
-                click() {
-                    const mainWindow = Windows.getByType('main');
-
-                    mainWindow.window.setFullScreen(!mainWindow.window.isFullScreen());
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.view.languages'),
-                submenu: languageMenu,
-            },
-        ],
-    });
-
 
     // DEVELOP
     const devToolsMenu = [];
@@ -519,17 +560,18 @@ let menuTempl = function (webviews) {
                 click() {
                     restartNode(ethereumNode.type, 'main');
                 },
-            },
-            {
-                label: 'Ellaism.io - Test network',
-                accelerator: 'CommandOrControl+Alt+2',
-                checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
-                enabled: ethereumNode.isOwnNode,
-                type: 'checkbox',
-                click() {
-                    restartNode(ethereumNode.type, 'test');
-                },
             }
+            // ,
+            // {
+            //     label: 'Ellaism.io - Test network',
+            //     accelerator: 'CommandOrControl+Alt+2',
+            //     checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
+            //     enabled: ethereumNode.isOwnNode,
+            //     type: 'checkbox',
+            //     click() {
+            //         restartNode(ethereumNode.type, 'test');
+            //     },
+            // }
         ] });
 
     // // Light mode switch should appear when not in Solo Mode (dev network)
@@ -590,7 +632,28 @@ let menuTempl = function (webviews) {
             },
         ],
     });
+    // VIEW
+    menu.push({
+        label: i18n.t('mist.applicationMenu.view.label'),
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.view.fullscreen'),
+                accelerator: switchForSystem({
+                    darwin: 'Command+Control+F',
+                    default: 'F11',
+                }),
+                click() {
+                    const mainWindow = Windows.getByType('main');
 
+                    mainWindow.window.setFullScreen(!mainWindow.window.isFullScreen());
+                },
+            },
+            {
+                label: i18n.t('mist.applicationMenu.view.languages'),
+                submenu: languageMenu,
+            },
+        ],
+    });
     // HELP
     const helpMenu = [];
 
@@ -617,17 +680,27 @@ let menuTempl = function (webviews) {
             }
         );
     }
-    helpMenu.push({
+    helpMenu.push(
+      {
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
             shell.openExternal('https://github.com/ellaism-io/ellagem/wiki');
         },
-    }, {
+      },
+      {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
             shell.openExternal('https://github.com/ellaism-io/ellagem/issues');
         },
-    });
+      },
+      {
+        label: i18n.t('mist.applicationMenu.help.learnmore'),
+        click() {
+            shell.openExternal('https://ellaism.org');
+        },
+      },
+
+      );
 
     menu.push({
         label: i18n.t('mist.applicationMenu.help.label'),
