@@ -96,8 +96,8 @@ let menuTempl = function (webviews) {
                 click() {
                     Windows.createPopup('about', {
                         electronOptions: {
-                            width: 420,
-                            height: 330,
+                            width: 620,
+                            height: 430,
                             alwaysOnTop: true,
                         },
                     });
@@ -168,7 +168,18 @@ let menuTempl = function (webviews) {
           {
               label: i18n.t('mist.applicationMenu.community.voting'),
               click() {
-                  shell.openExternal('https://vote.ellaism.io');
+                Windows.createPopup('carbonvote', {
+                    url: 'http://vote.ellaism.io',
+                    electronOptions: {
+                        width: 1124,
+                        height: 720,
+                        center: true,
+                        frame: true,
+                        resizable: true,
+                        titleBarStyle: 'default',
+                    }
+                }
+              );
               },
           },
           {
@@ -197,11 +208,12 @@ let menuTempl = function (webviews) {
           },
           {
               label: i18n.t('mist.applicationMenu.community.coinprice'),
+              accelerator: 'CommandOrControl+P',
               click() {
                   Windows.createPopup('coinprice', {
                       electronOptions: {
-                          width: 520,
-                          height: 330,
+                          width: 620,
+                          height: 230,
                           alwaysOnTop: true,
                       },
                   });
@@ -213,6 +225,12 @@ let menuTempl = function (webviews) {
     menu.push({
         label: i18n.t('mist.applicationMenu.exchanges.label'),
         submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.exchanges.cryptopia'),
+                click() {
+                    shell.openExternal('https://www.cryptopia.co.nz/Exchange/?market=ELLA_BTC');
+                },
+            },
             {
                 label: i18n.t('mist.applicationMenu.exchanges.stocks'),
                 click() {
@@ -238,6 +256,18 @@ let menuTempl = function (webviews) {
                     Windows.createPopup('requestAccount', {
                         electronOptions: {
                             width: 420, height: 230, alwaysOnTop: true,
+                        },
+                    });
+                },
+            },
+            {
+                label: i18n.t('mist.applicationMenu.app.walletsafety', { app: Settings.appName }),
+                click() {
+                    Windows.createPopup('walletsafety', {
+                        electronOptions: {
+                            width: 520,
+                            height: 330,
+                            alwaysOnTop: true,
                         },
                     });
                 },
@@ -461,7 +491,8 @@ let menuTempl = function (webviews) {
                         resizable: true,
                         titleBarStyle: 'default',
                     }
-                });
+                }
+              );
             },
         });
     }

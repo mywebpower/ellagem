@@ -4,6 +4,7 @@
             "app": {
                 "label": "Ellagem",
                 "about": "About Ellagem",
+                "walletsafety": "Wallet safety tips",
                 "checkForUpdates": "Check for updates...",
                 "checkForNodeUpdates": "Check for Ellaism node updates...",
                 "services": "Services",
@@ -81,6 +82,7 @@
             },
             "help": {
                 "label": "Help",
+                "walletsafety": "Wallet Safety Tips",
                 "mistWiki": "Troubleshooting and Help",
                 "gitter": "Mist channel on Gitter",
                 "reportBug": "Report an issue on Github",
@@ -91,12 +93,13 @@
                 "voting": "Carbon Voting",
                 "boards": "Message Boards",
                 "twitter": "Tweet Us",
-                "pools": "Mining Pools",
+                "pools": "Mining Pools ⛏",
                 "marketinfo": "Market Info",
                 "coinprice": "Coin Price"
             },
             "exchanges": {
                 "label": "Exchanges",
+                "cryptopia": "Cryptopia",
                 "stocks": "Stocks.Exchange",
                 "bisq": "Bisq P2P Exchange"
             }
