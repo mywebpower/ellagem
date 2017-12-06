@@ -58,7 +58,7 @@
             "develop": {
                 "label": "Develop",
                 "devTools": "Toggle developer tools",
-                "devToolsMistUI": "Mist UI",
+                "devToolsMistUI": "Ellagem UI",
                 "devToolsWalletUI": "Wallet UI",
                 "devToolsWebview": "__webview__",
                 "runTests": "Run tests",

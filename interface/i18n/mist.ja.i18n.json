@@ -3,249 +3,194 @@
         "applicationMenu": {
             "app": {
                 "label": "Ellagem",
-                "about": "Ellagem について",
-                "checkForUpdates": "アップデートの確認...",
-                "checkForNodeUpdates": "Check for Ethereum node updates...",
-                "services": "サービス",
-                "hide": "Ellagem を隠す",
-                "hideOthers": "ほかを隠す",
-                "showAll": "すべてを表示",
-                "quit": " Ellagem を中止する"
-            },
-            "edit": {
-                "label": "編集",
-                "undo": "Undo",
-                "redo": "Redo",
-                "cut": "カット",
-                "copy": "コピー",
-                "paste": "ペースト",
-                "selectAll": "全てを選択"
-            },
-            "view": {
-                "label": "ビュー",
-                "fullscreen": "フルスクリーンをトグルする",
-                "default": "Default"
+                "about": "About Ellagem",
+                "walletsafety": "Wallet safety tips",
+                "checkForUpdates": "Check for updates...",
+                "checkForNodeUpdates": "Check for Ellaism node updates...",
+                "services": "Services",
+                "hide": "Hide Ellagem",
+                "hideOthers": "Hide others",
+                "showAll": "Show all",
+                "quit": "Quit Ellagem"
             },
             "file": {
-                "label": "アカウント",
-                "importPresale": "アカウントを読み込む",
-                "newAccount": "新規アカウント",
-                "backup": "バックアップ",
-                "backupKeyStore": "アカウント",
-                "backupMist": "アプリケーションデータ"
+                "label": "Accounts",
+                "importPresale": "Import accounts",
+                "newAccount": "New account",
+                "backup": "Backup",
+                "backupKeyStore": "Key Files",
+                "backupMist": "Application data",
+                "swarmUpload": "Upload to Swarm..."
+            },
+            "edit": {
+                "label": "Edit",
+                "undo": "Undo",
+                "redo": "Redo",
+                "cut": "Cut",
+                "copy": "Copy",
+                "paste": "Paste",
+                "selectAll": "Select all"
+            },
+            "view": {
+                "label": "View",
+                "fullscreen": "Toggle full screen",
+                "languages": "Language",
+                "default": "Default",
+                "langCodes": {
+                    "ca": "Català",
+                    "de": "Deutsch",
+                    "en": "English",
+                    "es": "Español",
+                    "fa": "فارسى",
+                    "fr": "Français",
+                    "it": "Italiano",
+                    "ja": "日本語",
+                    "ko": "한국어 ",
+                    "nl": "Nederlands",
+                    "nb": "Norsk",
+                    "pt": "Português",
+                    "sq": "Shqip",
+                    "ru": "Pусский",
+                    "zh": "普通話",
+                    "zh-TW": "國語"
+                }
             },
             "develop": {
-                "uploadToSwarm": "Swarmにアップロード",
                 "label": "Develop",
-                "devTools": "開発者用ツールをトグルする",
-                "devToolsMistUI": "Mist UI",
+                "devTools": "Toggle developer tools",
+                "devToolsMistUI": "Ellagem UI",
                 "devToolsWalletUI": "Wallet UI",
                 "devToolsWebview": "__webview__",
-                "runTests": "テストを走らせる",
-                "logFiles": "ログファイルを表示する",
-                "ethereumNode": "Ethereum ノード",
-                "network": "ネットワーク",
-                "mainNetwork": "メインネットワーク",
-                "startMining": "⛏ マイニングを始める",
-                "stopMining": "⛏ マイニングを中止する",
-                "externalNode": "using external node",
+                "runTests": "Run tests",
+                "logFiles": "Show log file",
                 "openRemix": "Open Remix IDE",
+                "externalNode": "using external node",
+                "ethereumNode": "Ellaism Node",
+                "network": "Network",
+                "mainNetwork": "Main Network",
                 "nodeMode": "Chain download",
                 "fullNode": "Store full blockchain",
-                "lightNode": "Use light Node (experimental!)"
+                "lightNode": "Use light Node (experimental!)",
+                "startMining": "⛏ Start mining",
+                "stopMining": "⛏ Stop mining"
             },
             "window": {
                 "label": "Window",
-                "minimize": "最小化する",
-                "close": "閉じる",
-                "toFront": "全てを全面に持ってくる"
+                "minimize": "Minimize",
+                "close": "Close",
+                "toFront": "Bring all to front"
             },
             "help": {
-                "label": "ヘルプ",
-                "reportBug": "Report an issue on Github"
+                "label": "Help",
+                "walletsafety": "Wallet Safety Tips",
+                "mistWiki": "Troubleshooting and Help",
+                "gitter": "Mist channel on Gitter",
+                "reportBug": "Report an issue on Github",
+                "learnmore": "Learn more about ellaism"
+            },
+            "community": {
+                "label": "Community",
+                "voting": "Carbon Voting",
+                "boards": "Message Boards",
+                "twitter": "Tweet Us",
+                "pools": "Mining Pools ⛏",
+                "marketinfo": "Market Info",
+                "coinprice": "Coin Price"
+            },
+            "exchanges": {
+                "label": "Exchanges",
+                "cryptopia": "Cryptopia",
+                "stocks": "Stocks.Exchange",
+                "bisq": "Bisq P2P Exchange"
             }
         },
         "errors": {
-            "nodeConnect": "ノードにつながりませんか? ログを見て下さい。",
-            "nodeStartup": "ノードが始まらないようです。既に動かしていますか？今すぐデータベースを動かしますか？",
+            "nodeConnect": "Couldn't connect to node? See the logs for more:",
+            "nodeStartup": "It seems like the node couldn't be started.  Do you already have one running? Is it upgrading the database right now?",
             "timeSync": {
-                "title": "コンピューターのクロックが未だ同期されていません.",
-                "description": "Ethereum のネットワークと同期を成功させるためには、時間を同期させるサーバーとあなたのコンピューターを同期させる必要があります。",
-                "win32": "システム設定を開き、「インターネットの時間設定」を開いてチェックボックスにチェックを入れて下さい。詳しくはこちらのガイドをご覧下さい: http://www.guidingtech.com/3119/windows-clock-sync/",
-                "linux": "時間を同期させるサーバーを使うためには、 \"ntp\" を \"apt-get install ntp\"　をコマンドラインから入力してインストールする必要があります。",
-                "darwin": "時間を同期するためには、時間設定を開き \"時間と日にちを同期自動で同期\"　にチェックすることが必要です."
+                "title": "Your computer's clock is not synced.",
+                "description": "To successfully synchronize with the Ellaism network, you need to sync your computer's clock with a time sync server.",
+                "win32": "Go to your Internet Time Settings in your system preferences and check the box. See this guide for details: http://www.guidingtech.com/3119/windows-clock-sync/",
+                "linux": "To enable a time sync server, install \"ntp\" via \"apt-get install ntp\".",
+                "darwin": "To enable time sync, open the time preferences and check \"Set the time and date automatically\"."
             },
-            "nodeChecksumMismatch": {
+           "nodeChecksumMismatch": {
                 "title": "Checksum mismatch in downloaded node!",
                 "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain, use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
             }
         },
         "rightClick": {
-            "reload": "リロード",
-            "openDevTools": "開発者用ツールを開く",
-            "inspectElements": "要素を検証する"
+            "reload": "Reload",
+            "openDevTools": "Open developer tools",
+            "inspectElements": "Inspect element"
         },
         "nodeInfo": {
-            "nodeSyncing": "__blockDiff__ ブロックが残っています",
-            "blockReceived": "新しいブロックを受け取りました",
-            "timeSinceBlock": "最後のブロックから",
-            "peers": "ピアー",
+            "nodeSyncing": "__blockDiff__ blocks left",
+            "blockReceived": "New block received",
+            "blockReceivedShort": "New block",
             "blockNumber": "Your latest block number",
+            "timeSinceBlock": "Elapsed time since last block",
             "checkingWhichNetwork": "Checking network...",
             "mainNetwork": "Main-net",
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
-            "mainnetExplain": "You are on the main Ethereum global network",
-            "testnetExplain": "You are on the testnet, DO NOT SEND any real ether to these addresses",
-            "privatenetExplain": "You are on a private net, DO NOT SEND any real ether to these addresses",
-            "unknownnetExplain": "Unable to determine which network you are on"
+            "mainnetExplain": "You are on the main Ellaism global network",
+            "testnetExplain": "You are on the __name__. DO NOT SEND any real Ella to these addresses",
+            "privatenetExplain": "You are on a private net. DO NOT SEND any real ella to these addresses",
+            "unknownnetExplain": "Unable to determine which network you are on",
+            "peers": "peers"
         },
         "sidebar": {
             "buttons": {
-                "browser": "探す"
+                "browser": "Browse"
+            },
+            "submenu": {
+                "account": "Account",
+                "account_plural": "Accounts",
+                "connectAccounts": "Connect Accounts"
             }
         },
         "browserBar": {
             "buttons": {
-                "noAccounts": "アカウントがセットされていません",
+                "noAccounts": "No accounts set",
                 "connect": "Connect"
             }
         },
         "startScreen": {
-            "runningNodeFound": "走っているEthereum nodeを見つけました!",
-            "startingNode": "Ethereum ノードを開始しています。",
-            "startedNode": "アプリケーションを開始しています...",
-            "nodeConnectionTimeout": "Ethereum nodeをスタート出来ませんでした!<br><small>もし<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
-            "nodeBinaryNotFound": "Ethereum node バイナリーが見つかりませんでした。<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> 手動でスタートして下さい。 </a> </small>",
-            "nodeSyncing": "Ethereum node は同期中です...",
-            "nodeSyncInfo": "blockをダウンロードしています。 __displayBlock__ of __highestBlock__.",
-            "nodeSyncConnecting": "ピアーを探しています。...",
-            "peerSearchTimeout": "ピアーの検索を中止しています",
-            "stoppingNode": "Stopping Ethereum node...",
-            "nodeStarting": "Ethereum node starting up...",
-            "nodeStarted": "Ethereum node started",
-            "nodeConnected": "Ethereum node connected",
-            "nodeStopping": "Ethereum node stopping...",
-            "nodeStopped": "Ethereum node stopped",
-            "nodeError": "Ethereum node connection error :'(",
-            "unableToBindPort": "Ethereum node cannot run. Is another instance already running?",
+            "runningNodeFound": "Found running Ellaism node!",
+            "startingNode": "Starting Ellaism node...",
+            "stoppingNode": "Stopping Ellaism node...",
+            "startedNode": "Starting application...",
+            "nodeConnectionTimeout": "Couldn't start Ellaism node!<br><small>If you <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>installed Geth</a>, use this command to run it: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Or report an issue </a></small>",
+            "nodeBinaryNotFound": "No Ellaism node binary found!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Please start one manually before. </a> </small>",
+            "nodeStarting": "Ellaism node starting up...",
+            "nodeStarted": "Ellaism node started",
+            "nodeConnected": "Ellaism node connected",
+            "nodeStopping": "Ellaism node stopping...",
+            "nodeStopped": "Ellaism node stopped",
+            "nodeError": "Ellaism node connection error:'(",
+            "unableToBindPort": "Ellaism node cannot run. Is another instance already running?",
+            "nodeSyncing": "Ellaism node needs to sync, please wait...",
+            "nodeSyncInfo": "Downloading block __displayBlock__ of __highestBlock__",
             "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+            "nodeSyncConnecting": "Looking for peers...",
             "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
+            "peerSearchTimeout": "Skip peer search",
             "launchApp": "Launch Application",
             "clientBinaries": {
                 "scanning": "Checking for node update...",
                 "downloading": "Downloading new node...",
                 "loadConfig": "Loading client config...",
                 "filtering": "Filtering client binaries...",
-                "done": "Ethereum node up-to-date...",
+                "done": "Ellaism node up-to-date...",
                 "error": "Error running downloaded binary."
             }
         },
         "popupWindows": {
-            "requestAccount": {
-                "title": "アカウントを作成する",
-                "enterPassword": "パスワードを入力する",
-                "repeatPassword": "パスワードを繰り返し入力する",
-                "creating": "アカウントを生成しています...",
-                "errors": {
-                    "passwordMismatch": "あなたのパスワードはあっていません",
-                    "passwordTooShort": "Make a longer password"
-                }
-            },
-            "unlockMasterPassword": {
-                "title": "マスターパスワードを入力する",
-                "enterPassword": "マスターパスワードを入力する",
-                "unlocking": "ロックを解除しています...",
-                "errors": {
-                    "wrongPassword": "パスワードが間違っています。再度トライして下さい"
-                }
-            },
-            "sendTransactionConfirmation": {
-                "title": {
-                    "sendTransaction": "トランザクションを送信する",
-                    "contractExecution": "コントラクト実効する",
-                    "createContract": "コントラクトを作成する"
-                },
-                "contractExecutionInfo": "コントラクトの関数を実行しようとしています。これはバリューの移転を含むことがあります。",
-                "contractCreationInfo": "与えられたデータからコントラクトを作成しようとしています。",
-                "enterPassword": "トランザクションを実行するためにパスワードを入力して下さい。",
-                "unlocking": "承認しています...",
-                "createContract": "コントラクトを作成する",
-                "estimatedFee": "推定されるトランザクションフィーの消費",
-                "estimatedGasError": "データが実行できませんでした、そのため全てのgas が消費されます。",
-                "gasPrice": "ガスプライス",
-                "perMillionGas": "百万gas ごとのEther",
-                "gasLimit": "最大のフィーを提供",
-                "data": "データ",
-                "buttons": {
-                    "sendTransaction": "トランザクションを送信"
-                },
-                "errors": {
-                    "connectionTimeout": "ノードにつなげませんでした、バックグラウンドで落ちていますか?",
-                    "wrongPassword": "パスワードが間違っています",
-                    "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
-                    "sameAccount": "Can't send to itself"
-                },
-                "transactionThrow": "The contract won't allow this transaction to be executed",
-                "noEstimate": "We couldn't estimate the gas.",
-                "parameters": "Parameters",
-                "showRawBytecode": "show raw data",
-                "showDecodedParameters": "show decoded parameters",
-                "lookupData": "Try to decode data",
-                "lookupDataExplainer": "Look this up on the internet",
-                "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
-                "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
-            },
-            "onboarding": {
-                "description": "Ethereum は分散型のプラットフォームで、ブロックチェーン上でアプリケーションを作成することが出来ます。価値を転送することが出来、永続的に稼働するセキュリティの高いソフトウェアを作ることが出来ます。",
-                "goToTestnet": "テストネットワークを使用する (Rinkeby)",
-                "goToTestnetDescription": "サンドボックスのテストネットで、テクノロジーを自由に使う。本当のEtherを使うことなく.",
-                "gotoMainnet": "メインネットワークを使用する",
-                "gotoMainnetDescription": "コントラクトを作成して実行するためにいくらかのEtherが必要となるでしょう。心配することはありません、手に入れるためにこちらの方法があります。...",
-                "doYouHaveAWalletFile": "ウォレットファイルを持っていますか?",
-                "walletFileDescription": "<p>もし2014年のプリセールに参加していたら、 <code>ethereum_wallet_backup.json</code>という名前のファイルを持っているはずです。プリセールのあとにダウンロードしているか、もしくはEmailにて受け取っているはずです。</p>",
-                "dropFilesHere": "プリセールファイルを削除する",
-                "creating": "作成しています...",
-                "importing": "...",
-                "skip": "このステップをスキップする",
-                "next": "次へ",
-                "protectTitle": "アカウントを守る",
-                "protectDescription": "新しいアカウントのためにパスワードを作成する. 必ず強いキーにしてください!",
-                "accountTitle": "もっとダウンロードする!",
-                "accountTitleTestnet": "マイニングを行う!",
-                "etherDescription": "The ethereum network  “Ether”. Ethereum networkで何かを行うためには必ず必要となります。",
-                "loadItDescription": "既にもし Bitcoinを持っているか, もしくは他の暗号通貨を持っている場合には簡単にShapeshiftから変換する事ができます。 <br><br> 私たちは <strong>0.25 to 1 ether</strong>を変換することをおすすめします.",
-                "mineItDescription": "<strong>テストネットでは自分自身でマイニングを行うか、 <em>Develop</em> メニューから <em>マイニングを始める</em>を選んで. </strong> <br> <strong> 絶対にこのアドレスにはEtherを送らないでください </strong>",
-                "you": "あなた",
-                "etherbase": "メインアカウント(etherbase)",
-                "depositBitcoin": "Bitcoinをデポジットする",
-                "learnIt": "待っている間にEthereumWalletのことを学ぶ",
-                "downloadingBlocks": "ブロックをダウンロードする",
-                "tutorial1Description": "<p> 全て終わり、後はダウンロードが終了するのは待つだけです。ここにいくつかのサジェスチョンがあります。: </p> <h4>あなたのお金を発行する </h4> <p> 暗号通貨を一定の供給と共に作成することが出来、トークンを現実世界のアセットと関連付ける事ができます。</p>",
-                "tutorial2Description": "<h4>クラウドセールを作成する </h4> <p>第三者の介入無く共通のゴールを目指して一緒に進みましょう. 従来のファンディングシステムではとは異なり、ブロックチェーンを用いてダイレクトに資金を集める事ができます。</p>",
-                "tutorial3Description": "<h4>ブロックチェーン組織 </h4> <p> どのようにして資金を使うのか、そして誰が決定するのかについて破ることが出来ないルールを持った自律的な組織を作成しましょう。そして、あなたの支援者に、どのように資金が使われるのかをアクティブに考え、行動してもらうことが出来ます。</p>",
-                "buttons": {
-                    "showPassword": "パスワードを見せる",
-                    "importAccount": "アカウントをインポートする",
-                    "launchApp": "アプリケーションをスタート!",
-                    "learnReceipt": "このレシピを学ぶ"
-                },
-                "errors": {
-                    "nodeNotStartedYet": "ノードが開始して再度起動する迄もう少し待つ",
-                    "unknownFile": "ファイルが認識できませんでした.",
-                    "wrongPassword": "passwordが間違っています",
-                    "importFailed": "ファイルが読み込めませんでした: __error__のエラーです"
-                },
-                "viaShapeshift": "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "syncMessage": "Block __displayBlock__ of __highestBlockString__",
-                "syncMessageWithStates": "Block __displayBlock__ of __highestBlockString__ (Chain structure __statesPercent__%)",
-                "startingSync": "Getting ready to sync.."
-            },
             "updateAvailable": {
                 "newVersionAvailable": "New __name__ version available",
                 "version": "Version",
@@ -258,17 +203,118 @@
                 "checking": "Checking for updates to __name__...",
                 "noUpdateFound": "No update found. You are running the latest version of __name__."
             },
+            "requestAccount": {
+                "title": "Create account",
+                "enterPassword": "Enter password",
+                "repeatPassword": "Repeat password",
+                "creating": "Generating account...",
+                "backupHint": "Make sure you backup your keyfiles AND password!\n\nYou can find your keyfiles folder using the main menu -> Accounts -> Backup -> Accounts. Keep a copy of the \"keystore\" folder where you can't lose it!",
+                "errors": {
+                    "passwordMismatch": "Your passwords don't match.",
+                    "passwordTooShort": "Make a longer password"
+                }
+            },
+            "unlockMasterPassword": {
+                "title": "Enter master password",
+                "enterPassword": "Enter master password",
+                "unlocking": "Unlocking...",
+                "errors": {
+                    "wrongPassword": "Password is wrong. Try again."
+                }
+            },
+            "sendTransactionConfirmation": {
+                "title": {
+                    "sendTransaction": "Send transaction",
+                    "contractExecution": "Execute contract",
+                    "createContract": "Create contract"
+                },
+                "contractExecutionInfo": "You are about to execute a function on a contract. This might involve transfer of value.",
+                "contractCreationInfo": "You are about to create a contract from the provided data.",
+                "enterPassword": "Enter password to confirm the transaction",
+                "unlocking": "Confirming...",
+                "createContract": "Create contract",
+                "estimatedFee": "Estimated fee consumption",
+                "estimatedGasError": "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
+                "transactionThrow": "The contract won't allow this transaction to be executed",
+                "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+                "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
+                "noEstimate": "We couldn't estimate the gas.",
+                "gasPrice": "Gas price",
+                "perMillionGas": "ether per million gas",
+                "gasLimit": "Provide maximum fee",
+                "data": "Raw Data",
+                "parameters": "Parameters",
+                "buttons": {
+                    "sendTransaction": "Send transaction"
+                },
+                "errors": {
+                    "connectionTimeout": "Couldn't connect to the node, did it crash in the background?",
+                    "wrongPassword": "Wrong password",
+                    "multipleKeysMatchAddress": "Multiple keys match address.  Please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
+                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "sameAccount": "Can't send to itself"
+                },
+                "showRawBytecode": "show raw data",
+                "showDecodedParameters": "show decoded parameters",
+                "lookupData": "Try to decode data",
+                "lookupDataExplainer": "Look this up on the internet"
+            },
+            "onboarding": {
+                "description": "Ellaism is a platform for decentralized blockchain apps with a fully featured programming language",
+                "goToTestnet": "Use the test network (NOT ONLINE)",
+                "goToTestnetDescription": "Test the technology freely in a sandboxed testnet, without using real Ether.",
+                "gotoMainnet": "Use the main network",
+                "gotoMainnetDescription": "You’ll need some Ether to create and execute contracts. Don't worry, we'll help you get some...",
+                "doYouHaveAWalletFile": "Do you have a wallet file?",
+                "walletFileDescription": "<p>Move any wallet file here to import.<br></p>",
+                "dropFilesHere": "Drop wallet file",
+                "creating": "Creating...",
+                "importing": "Importing...",
+                "skip": "Skip this step",
+                "next": "Next",
+                "protectTitle": "Protect your account",
+                "protectDescription": "Choose a password for your new account. Make it as strong as if it were to protect your house keys!",
+                "accountTitle": "Load it up!",
+                "accountTitleTestnet": "Mine some!",
+                "etherDescription": "The ellaism network is based on a token called “Ella”. You’ll need a small amount of it to do anything on the Ellaism network.",
+                "loadItDescription": "If you already own Bitcoin, or any other cryptocurrency, you can easily convert it to ether using Shapeshift. <br><br> We recommend loading somewhere between <strong>0.25 to 1 ether</strong>.",
+                "faucetDescription": "The Rinkeby testnet uses Clique Proof of Authority as a consensus mechanism, therefore there's no mining. If you want to get some test ether, head to the Rinkeby Faucet: <strong> faucet.rinkeby.io </strong>",
+                "you": "YOU",
+                "etherbase": "Main account (etherbase)",
+                "depositBitcoin": "Deposit using Bitcoin",
+                "viaShapeshift": "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
+                "learnIt": "Learn while you wait",
+                "downloadingBlocks": "Downloading blocks",
+                "syncMessage": "Block __displayBlock__ of __highestBlockString__",
+                "syncMessageWithStates": "Block __displayBlock__ of __highestBlockString__ (Chain structure __statesPercent__%)",
+                "startingSync": "Getting ready to sync..",
+                "tutorial1Description": "<p> Now the only thing left to do is wait for the download to finish. Here are some reading suggestions: </p> <h4>Make your own money </h4> <p> Make a cryptocurrency with a fixed market supply, tokens representing real world assets, etc </p>",
+                "tutorial2Description": "<h4> Create a crowdsale </h4> <p> Raise funds for a common goal, fully trustable without a third party. Sidestep the hurdle of traditional funding system and go directly to the source by funding an organization via the blockchain.</p>",
+                "tutorial3Description": "<h4> Create a blockchain organization </h4> <p> Create an autonomous organization with rules on spending money and making decisions for you and your investors.</p>",
+                "buttons": {
+                    "showPassword": "Show password",
+                    "importAccount": "Import account",
+                    "launchApp": "Launch Application!",
+                    "learnReceipt": "Learn this recipe"
+                },
+                "errors": {
+                    "nodeNotStartedYet": "Wait a few more seconds until your node is fully started and try again",
+                    "unknownFile": "File not recognised.",
+                    "wrongPassword": "Wrong password.",
+                    "importFailed": "Couldn't import the file, got: __error__"
+                }
+            },
             "connectAccount": {
                 "chooseAccountTitle": "Choose account",
                 "createAccount": "Create new account",
                 "pinToSidebar": "Pin app to the sidebar",
-                "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
+                "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information related to your accounts, including balances connected to it."
             }
         }
     },
     "elements": {
-        "checksumAlert": "このアドレスは正しく見えますが、誤字があります。もう一度確認して再度入力下さい。",
-        "identiconHelper": "これはセキュリティアイコンです。もし何かアドレスに変更があればアイコンは全く異なるものになります。",
+        "checksumAlert":"This address looks valid, but it doesn't have some security features that will protect you against typos, so double check you have the right one. If provided, check if the security icon matches.",
+        "identiconHelper": "This is a security icon.  If there were any change to the address, the resulting icon would be a completely different one",
         "type": {
             "address": "Address",
             "bool": "Boolean",
