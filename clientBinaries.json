@@ -112,12 +112,12 @@
             }
         },
         "Parity": {
-            "version": "1.8.3",
+            "version": "1.8.4",
             "platforms": {
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.3/parity_1.8.3_x86_64.zip",
+                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_x86_64.zip",
                             "type": "zip",
                             "md5": "5eb2432ce09e4511c5dc4517e737bc26",
                             "bin": "parity.exe"
@@ -130,14 +130,14 @@
                                 ],
                                 "output": [
                                     "Parity",
-                                    "1.8.3"
+                                    "1.8.4"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.3/parity_1.8.3_x86_64.zip",
+                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_x86_64.zip",
                             "type": "zip",
                             "md5": "5eb2432ce09e4511c5dc4517e737bc26",
                             "bin": "parity.exe"
@@ -150,7 +150,7 @@
                                 ],
                                 "output": [
                                     "Parity",
-                                    "1.8.3"
+                                    "1.8.4"
                                 ]
                             }
                         }
@@ -159,7 +159,7 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.3/parity_1.8.3_mac.zip",
+                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_mac.zip",
                             "type": "zip",
                             "md5": "1b5f4fa0f04dc760ed6d5df9333f1fb9",
                             "bin": "parity"
@@ -172,7 +172,7 @@
                                 ],
                                 "output": [
                                     "Parity",
-                                    "1.8.3"
+                                    "1.8.4"
                                 ]
                             }
                         }
@@ -181,7 +181,7 @@
                 "linux": {
                   "x64": {
                       "download": {
-                          "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.3/parity_1.8.3_linux_x86_64.zip",
+                          "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_linux_x86_64.zip",
                           "type": "zip",
                           "md5": "6093490d0ce4186405405fe0e431267f",
                           "bin": "parity"
@@ -194,14 +194,14 @@
                               ],
                               "output": [
                                   "Parity",
-                                  "1.8.3"
+                                  "1.8.4"
                               ]
                           }
                       }
                   },
                   "ia32": {
                       "download": {
-                          "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.3/parity_1.8.3_linux_x86_64.zip",
+                          "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_linux_x86_64.zip",
                           "type": "zip",
                           "md5": "6093490d0ce4186405405fe0e431267f",
                           "bin": "parity"
@@ -214,7 +214,7 @@
                               ],
                               "output": [
                                   "Parity",
-                                  "1.8.3"
+                                  "1.8.4"
                               ]
                           }
                       }
