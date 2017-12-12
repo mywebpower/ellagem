@@ -185,9 +185,7 @@ gulp.task('build-dist', (cb) => {
                         [
                             path.join(__dirname, '..', 'LICENSE'),
                             path.join(__dirname, '..', 'README.md'),
-                            path.join(__dirname, '..', 'AUTHORS'),
-			    path.join(__dirname, '..', 'ellaism.json'),
-			    path.join(__dirname, '..', 'ellaismtestnet.json')	
+                            path.join(__dirname, '..', 'AUTHORS')
                         ],
                         params.appOutDir
                     );
