@@ -119,7 +119,7 @@
                         "download": {
                             "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_x86_64.zip",
                             "type": "zip",
-                            "md5": "5eb2432ce09e4511c5dc4517e737bc26",
+                            "md5": "dc14e7363f3b70805d03c5a3c6fb9624",
                             "bin": "parity.exe"
                         },
                         "bin": "parity",
@@ -139,7 +139,7 @@
                         "download": {
                             "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_x86_64.zip",
                             "type": "zip",
-                            "md5": "5eb2432ce09e4511c5dc4517e737bc26",
+                            "md5": "dc14e7363f3b70805d03c5a3c6fb9624",
                             "bin": "parity.exe"
                         },
                         "bin": "parity",
@@ -161,7 +161,7 @@
                         "download": {
                             "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_mac.zip",
                             "type": "zip",
-                            "md5": "1b5f4fa0f04dc760ed6d5df9333f1fb9",
+                            "md5": "6d21332b462db0d816d3649fd6be590f",
                             "bin": "parity"
                         },
                         "bin": "parity",
@@ -183,7 +183,7 @@
                       "download": {
                           "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_linux_x86_64.zip",
                           "type": "zip",
-                          "md5": "6093490d0ce4186405405fe0e431267f",
+                          "md5": "08329e5bda59f75a42d9144ca3972bea",
                           "bin": "parity"
                       },
                       "bin": "parity",
@@ -203,7 +203,7 @@
                       "download": {
                           "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_linux_x86_64.zip",
                           "type": "zip",
-                          "md5": "6093490d0ce4186405405fe0e431267f",
+                          "md5": "08329e5bda59f75a42d9144ca3972bea",
                           "bin": "parity"
                       },
                       "bin": "parity",
