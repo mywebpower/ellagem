@@ -385,7 +385,7 @@ class EthereumNode extends EventEmitter {
                   case 'test':
                       args = [
                         '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--chain', 'ellaismtestnet',
+                        '--chain', 'C:\\Program Files\\Ellagem\\ellaismtestnet.json',
                         '--usd-per-tx', '0',
                         '--geth',
                         '--rpc'
@@ -397,7 +397,7 @@ class EthereumNode extends EventEmitter {
                       args = (nodeType === 'parity')
                           ? [
                               '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                              '--chain', 'ellaism',
+                              '--chain', 'C:\\Program Files\\Ellagem\\ellaism.json',
                               '--usd-per-tx', '0',
                               '--geth'
                           ]

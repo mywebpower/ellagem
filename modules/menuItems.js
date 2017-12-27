@@ -171,7 +171,7 @@ let menuTempl = function (webviews) {
                 Windows.createPopup('carbonvote', {
                     url: 'http://vote.ellaism.io',
                     electronOptions: {
-                        width: 1124,
+                        width: 1224,
                         height: 720,
                         center: true,
                         frame: true,
@@ -204,6 +204,12 @@ let menuTempl = function (webviews) {
               label: i18n.t('mist.applicationMenu.community.marketinfo'),
               click() {
                   shell.openExternal('https://coinmarketcap.com/currencies/ellaism/');
+              },
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.whattomine'),
+              click() {
+                  shell.openExternal('https://whattomine.com/coins/221-ella-ethash');
               },
           },
           {
