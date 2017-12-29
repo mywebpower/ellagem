@@ -195,6 +195,18 @@ let menuTempl = function (webviews) {
               },
           },
           {
+              label: i18n.t('mist.applicationMenu.community.tokens', { app: Settings.appName }),
+              click() {
+                  Windows.createPopup('tokens', {
+                      electronOptions: {
+                          width: 620,
+                          height: 430,
+                          alwaysOnTop: true,
+                      },
+                  });
+              },
+          },
+          {
               label: i18n.t('mist.applicationMenu.community.twitter'),
               click() {
                   shell.openExternal('https://twitter.com/EllaismCoin');
@@ -244,6 +256,12 @@ let menuTempl = function (webviews) {
                 },
             },
             {
+                label: i18n.t('mist.applicationMenu.exchanges.altcoin'),
+                click() {
+                    shell.openExternal('https://www.altcoin.io/');
+                },
+            },
+            {
                 label: i18n.t('mist.applicationMenu.exchanges.bisq'),
                 click() {
                     shell.openExternal('https://bisq.network/');
@@ -277,6 +295,23 @@ let menuTempl = function (webviews) {
                         },
                     });
                 },
+            },
+            {
+                label: i18n.t('mist.applicationMenu.file.paperWallet'),
+                click() {
+                  Windows.createPopup('myellawallet', {
+                      url: 'https://ellaism.github.io/ellawallet/',
+                      electronOptions: {
+                          width: 1280,
+                          height: 820,
+                          center: true,
+                          frame: true,
+                          resizable: true,
+                          titleBarStyle: 'default',
+                      }
+                  }
+                );
+              },
             },
             {
                 type: 'separator',
@@ -549,18 +584,18 @@ let menuTempl = function (webviews) {
             });
         }
 
-        // GETH NEEDS WORK / NO TESTNET YET EITHER
-        // if (gethClient) {
-        //     nodeSubmenu.push({
-        //         label: `Geth ${gethClient.version}`,
-        //         checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
-        //         enabled: ethereumNode.isOwnNode,
-        //         type: 'checkbox',
-        //         click() {
-        //             restartNode('geth', null, 'fast', webviews);
-        //         },
-        //     });
-        // }
+        // GETH NEEDS WORK
+        if (gethClient) {
+            nodeSubmenu.push({
+                label: `Geth ${gethClient.version}`,
+                checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
+                enabled: ethereumNode.isOwnNode,
+                type: 'checkbox',
+                click() {
+                    restartNode('geth', null, 'fast', webviews);
+                },
+            });
+        }
 
         // NO ETH NODE
         // if (ethClient) {

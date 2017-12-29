@@ -17,6 +17,7 @@
                 "label": "Accounts",
                 "importPresale": "Import accounts",
                 "newAccount": "New account",
+                "paperWallet": "Online Wallet Access",
                 "backup": "Backup",
                 "backupKeyStore": "Key Files",
                 "backupMist": "Application data",
@@ -92,6 +93,7 @@
                 "label": "Community",
                 "voting": "Carbon Voting",
                 "boards": "Message Boards",
+                "tokens": "Official Tokens",
                 "twitter": "Tweet Us",
                 "pools": "Mining Pools ⛏",
                 "marketinfo": "Market Info",
@@ -100,7 +102,8 @@
             },
             "exchanges": {
                 "label": "Exchanges",
-                "cryptopia": "Cryptopia",
+                "cryptopia": "Cryptopia.co.nz",
+                "altcoin":"Altcoin.io (2018)",
                 "stocks": "Stocks.Exchange",
                 "bisq": "Bisq P2P Exchange"
             }
