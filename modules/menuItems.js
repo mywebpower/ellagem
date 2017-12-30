@@ -166,6 +166,135 @@ let menuTempl = function (webviews) {
         label: i18n.t('mist.applicationMenu.community.label'),
         submenu: [
           {
+              label: i18n.t('mist.applicationMenu.community.social'),
+              submenu: [
+                  {
+                      label: i18n.t('mist.applicationMenu.community.boards'),
+                      click() {
+                        shell.openExternal('https://board.ellaism.io');
+                      },
+                  },
+                  {
+                      label: i18n.t('mist.applicationMenu.community.twitter'),
+                      click() {
+                          shell.openExternal('https://twitter.com/EllaismCoin');
+                      },
+                  },
+                  {
+                      label: i18n.t('mist.applicationMenu.community.reddit'),
+                      click() {
+                        shell.openExternal('https://www.reddit.com/r/ellaism/');
+                      },
+                  },
+                  {
+                      label: i18n.t('mist.applicationMenu.community.pools'),
+                      click() {
+                          shell.openExternal('https://minerpool.net/pools/ellaism/');
+                      },
+                  },
+              ],
+          },
+          {
+              label: i18n.t('mist.applicationMenu.community.coininfo'),
+              submenu: [
+                {
+                    label: i18n.t('mist.applicationMenu.community.coinprice'),
+                    accelerator: 'CommandOrControl+P',
+                    click() {
+                        Windows.createPopup('coinprice', {
+                            electronOptions: {
+                                width: 620,
+                                height: 230,
+                                alwaysOnTop: true,
+                            },
+                        });
+                    },
+                },
+                {
+                    label: i18n.t('mist.applicationMenu.community.marketinfo'),
+                    click() {
+                        shell.openExternal('https://coinmarketcap.com/currencies/ellaism/');
+                    },
+                },
+                {
+                    label: i18n.t('mist.applicationMenu.community.whattomine'),
+                    click() {
+                        shell.openExternal('https://whattomine.com/coins/221-ella-ethash');
+                    },
+                },
+                {
+                    label: i18n.t('mist.applicationMenu.community.tokens', { app: Settings.appName }),
+                    click() {
+                        Windows.createPopup('tokens', {
+                            electronOptions: {
+                                width: 620,
+                                height: 430,
+                                alwaysOnTop: true,
+                            },
+                        });
+                    },
+                },
+              ],
+          },
+          {
+              label: i18n.t('mist.applicationMenu.file.networkstats'),
+              accelerator: 'CommandOrControl+T',
+              click() {
+                Windows.createPopup('networkstats', {
+                    url: 'http://stats.ellaism.org/',
+                    electronOptions: {
+                        width: 1920,
+                        height: 1080,
+                        center: true,
+                        frame: true,
+                        resizable: true,
+                        titleBarStyle: 'default',
+                    }
+                }
+              );
+            },
+          },
+          {
+              type: 'separator',
+          },
+          {
+              label: i18n.t('mist.applicationMenu.exchanges.label'),
+              submenu: [
+                {
+                    label: i18n.t('mist.applicationMenu.exchanges.cryptopia'),
+                    click() {
+                        shell.openExternal('https://www.cryptopia.co.nz/Exchange/?market=ELLA_BTC');
+                    },
+                },
+                {
+                    label: i18n.t('mist.applicationMenu.exchanges.stocks'),
+                    click() {
+                        shell.openExternal('https://stocks.exchange/trade/ELLA/BTC');
+                    },
+                },
+              ],
+          },
+          {
+              label: i18n.t('mist.applicationMenu.exchanges.labelp2p'),
+              submenu: [
+                {
+                    label: i18n.t('mist.applicationMenu.exchanges.bisq'),
+                    click() {
+                        shell.openExternal('https://bisq.network/');
+                    },
+                },
+                {
+                    label: i18n.t('mist.applicationMenu.exchanges.altcoin'),
+                    click() {
+                        shell.openExternal('https://www.altcoin.io/');
+                    },
+                },
+              ],
+          },
+          {
+              type: 'separator',
+          },
+          {
               label: i18n.t('mist.applicationMenu.community.voting'),
               click() {
                 Windows.createPopup('carbonvote', {
@@ -182,91 +311,6 @@ let menuTempl = function (webviews) {
               );
               },
           },
-          {
-              label: i18n.t('mist.applicationMenu.community.boards'),
-              click() {
-                  shell.openExternal('https://board.ellaism.io');
-              },
-          },
-          {
-              label: i18n.t('mist.applicationMenu.community.pools'),
-              click() {
-                  shell.openExternal('https://minerpool.net/pools/ellaism/');
-              },
-          },
-          {
-              label: i18n.t('mist.applicationMenu.community.tokens', { app: Settings.appName }),
-              click() {
-                  Windows.createPopup('tokens', {
-                      electronOptions: {
-                          width: 620,
-                          height: 430,
-                          alwaysOnTop: true,
-                      },
-                  });
-              },
-          },
-          {
-              label: i18n.t('mist.applicationMenu.community.twitter'),
-              click() {
-                  shell.openExternal('https://twitter.com/EllaismCoin');
-              },
-          },
-          {
-              label: i18n.t('mist.applicationMenu.community.marketinfo'),
-              click() {
-                  shell.openExternal('https://coinmarketcap.com/currencies/ellaism/');
-              },
-          },
-          {
-              label: i18n.t('mist.applicationMenu.community.whattomine'),
-              click() {
-                  shell.openExternal('https://whattomine.com/coins/221-ella-ethash');
-              },
-          },
-          {
-              label: i18n.t('mist.applicationMenu.community.coinprice'),
-              accelerator: 'CommandOrControl+P',
-              click() {
-                  Windows.createPopup('coinprice', {
-                      electronOptions: {
-                          width: 620,
-                          height: 230,
-                          alwaysOnTop: true,
-                      },
-                  });
-              },
-          },
-        ],
-    });
-    // Exchanges
-    menu.push({
-        label: i18n.t('mist.applicationMenu.exchanges.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.exchanges.cryptopia'),
-                click() {
-                    shell.openExternal('https://www.cryptopia.co.nz/Exchange/?market=ELLA_BTC');
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.exchanges.stocks'),
-                click() {
-                    shell.openExternal('https://stocks.exchange/trade/ELLA/BTC');
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.exchanges.altcoin'),
-                click() {
-                    shell.openExternal('https://www.altcoin.io/');
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.exchanges.bisq'),
-                click() {
-                    shell.openExternal('https://bisq.network/');
-                },
-            },
         ],
     });
     // ACCOUNTS
@@ -298,6 +342,7 @@ let menuTempl = function (webviews) {
             },
             {
                 label: i18n.t('mist.applicationMenu.file.paperWallet'),
+                accelerator: 'CommandOrControl+O',
                 click() {
                   Windows.createPopup('myellawallet', {
                       url: 'https://ellaism.github.io/ellawallet/',
@@ -585,17 +630,17 @@ let menuTempl = function (webviews) {
         }
 
         // GETH NEEDS WORK
-        if (gethClient) {
-            nodeSubmenu.push({
-                label: `Geth ${gethClient.version}`,
-                checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
-                enabled: ethereumNode.isOwnNode,
-                type: 'checkbox',
-                click() {
-                    restartNode('geth', null, 'fast', webviews);
-                },
-            });
-        }
+        // if (gethClient) {
+        //     nodeSubmenu.push({
+        //         label: `Geth ${gethClient.version}`,
+        //         checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
+        //         enabled: ethereumNode.isOwnNode,
+        //         type: 'checkbox',
+        //         click() {
+        //             restartNode('geth', null, 'fast', webviews);
+        //         },
+        //     });
+        // }
 
         // NO ETH NODE
         // if (ethClient) {

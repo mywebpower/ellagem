@@ -2,7 +2,7 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "Ellagem",
+                "label": "✧ Ellagem",
                 "about": "About Ellagem",
                 "walletsafety": "Wallet safety tips",
                 "checkForUpdates": "Check for updates...",
@@ -14,11 +14,12 @@
                 "quit": "Quit Ellagem"
             },
             "file": {
-                "label": "Accounts",
+                "label": "☎ Accounts",
                 "importPresale": "Import accounts",
                 "newAccount": "New account",
                 "paperWallet": "Online Wallet Access",
-                "backup": "Backup",
+                "networkstats":"Network Status",
+                "backup": "↴ Backup",
                 "backupKeyStore": "Key Files",
                 "backupMist": "Application data",
                 "swarmUpload": "Upload to Swarm..."
@@ -33,7 +34,7 @@
                 "selectAll": "Select all"
             },
             "view": {
-                "label": "View",
+                "label": "↴ View",
                 "fullscreen": "Toggle full screen",
                 "languages": "Language",
                 "default": "Default",
@@ -57,7 +58,7 @@
                 }
             },
             "develop": {
-                "label": "Develop",
+                "label": "⌨ Develop",
                 "devTools": "Toggle developer tools",
                 "devToolsMistUI": "Ellagem UI",
                 "devToolsWalletUI": "Wallet UI",
@@ -66,8 +67,8 @@
                 "logFiles": "Show log file",
                 "openRemix": "Open Remix IDE",
                 "externalNode": "using external node",
-                "ethereumNode": "Ellaism Node",
-                "network": "Network",
+                "ethereumNode": "↴ Ellaism Node",
+                "network": "↴ Network",
                 "mainNetwork": "Main Network",
                 "nodeMode": "Chain download",
                 "fullNode": "Store full blockchain",
@@ -76,13 +77,13 @@
                 "stopMining": "⛏ Stop mining"
             },
             "window": {
-                "label": "Window",
+                "label": "↴ Window",
                 "minimize": "Minimize",
                 "close": "Close",
                 "toFront": "Bring all to front"
             },
             "help": {
-                "label": "Help",
+                "label": "↴ Help",
                 "walletsafety": "Wallet Safety Tips",
                 "mistWiki": "Troubleshooting and Help",
                 "gitter": "Mist channel on Gitter",
@@ -90,18 +91,22 @@
                 "learnmore": "Learn more about ellaism"
             },
             "community": {
-                "label": "Community",
+                "label": "♕ Community",
+                "social":"Social Links",
+                "coininfo": "Coin Info",
                 "voting": "Carbon Voting",
                 "boards": "Message Boards",
-                "tokens": "Official Tokens",
+                "tokens": "Official Tokens ✯",
                 "twitter": "Tweet Us",
+                "reddit": "Reddit",
                 "pools": "Mining Pools ⛏",
                 "marketinfo": "Market Info",
                 "whattomine": "Mining Profit",
-                "coinprice": "Coin Price"
+                "coinprice": "Current Price"
             },
             "exchanges": {
-                "label": "Exchanges",
+                "label": "↴ Central Exchanges",
+                "labelp2p": "↴ P2P Exchanges",
                 "cryptopia": "Cryptopia.co.nz",
                 "altcoin":"Altcoin.io (2018)",
                 "stocks": "Stocks.Exchange",
