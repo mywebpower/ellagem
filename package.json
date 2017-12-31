@@ -1,6 +1,6 @@
 {
   "name": "Ellagem",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "license": "GPL-3.0",
   "author": "Ellaism.io Community <dfmpay87@gmail.com>",
   "repository": {
@@ -19,7 +19,7 @@
     "chai-as-promised": "^6.0.0",
     "chai-string": "^1.3.0",
     "electron-window-state": "^4.0.1",
-    "ellaism-client-binaries": "^1.1.0",
+    "ellaism-client-binaries": "^1.1.3",
     "ethereum-client-binaries": "^1.6.1",
     "ethereum-keyfile-recognizer": "^1.0.2",
     "ethereumjs-abi": "^0.6.3",

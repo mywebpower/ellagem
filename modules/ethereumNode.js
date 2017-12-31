@@ -444,7 +444,7 @@ class EthereumNode extends EventEmitter {
                         args = (nodeType === 'parity')
                             ? [
                                 '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                                '--chain', '/var/tmp/ellaism.json',
+                                '--chain', '/opt/Ellagem/ellaism.json',
                                 '--usd-per-tx', '0',
                                 '--geth'
                             ]
