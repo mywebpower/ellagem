@@ -386,7 +386,7 @@ let menuTempl = function (webviews) {
                                 if (process.platform === 'freebsd' ||
                                 process.platform === 'linux' ||
                                 process.platform === 'sunos') {
-                                    userPath += '/.ellaism/mainnet/keystore';
+                                    userPath += '/.local/share/io.parity.ethereum/keys/ellaism';
                                 }
 
                                 if (process.platform === 'win32') {
