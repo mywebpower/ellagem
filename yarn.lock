@@ -1716,9 +1716,9 @@ electron@1.7.9:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
 
-ellaism-client-binaries@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ellaism-client-binaries/-/ellaism-client-binaries-1.0.0.tgz#15cda1fdeca485f096d453cf6b5a8edb2675964c"
+ellaism-client-binaries@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ellaism-client-binaries/-/ellaism-client-binaries-1.1.0.tgz#c4ec770868ab823a22d76b3e23962ec05dd3ffc5"
   dependencies:
     buffered-spawn "^3.3.2"
     got "^6.5.0"
@@ -2380,7 +2380,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-fstream@^1.0.2, fstream@^1.0.8:
+fstream@^1.0.11, fstream@^1.0.2, fstream@^1.0.8:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/fstream/-/fstream-1.0.11.tgz#5c1fb1f117477114f0632a0eb4b71b3cb0fd3171"
   dependencies:

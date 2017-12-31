@@ -289,7 +289,7 @@ class Settings {
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.ellaism/mainnet/geth.ipc';
+            ipcPath += '/.ethereum/geth.ipc';
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\geth.ipc';
         }

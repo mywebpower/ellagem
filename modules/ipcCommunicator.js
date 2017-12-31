@@ -144,12 +144,12 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                         keystorePath += '/.web3/keys';
                     }
                 // geth
-                } else {
+              } else {
                     if (process.platform === 'darwin') keystorePath += '/Library/Ethereum/keystore';
 
                     if (process.platform === 'freebsd' ||
                         process.platform === 'linux' ||
-                        process.platform === 'sunos') keystorePath += '/.ethereum/keystore';
+                        process.platform === 'sunos') keystorePath += '/.local/share/io.parity.ethereum/keys/ellaism';
 
                     if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\Ethereum\\keystore`;
                 }
