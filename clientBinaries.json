@@ -159,10 +159,10 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_mac.zip",
-                            "type": "zip",
-                            "md5": "6d21332b462db0d816d3649fd6be590f",
-                            "bin": "parity"
+                            "url": "https://github.com/ellaism-io/ellaism-parity-zip/releases/download/v1.8.4/parity_1.8.4_mac.tar.gz",
+                            "type": "tar",
+                            "md5": "77dd7c3cd65843f69999ab02c2bcb319",
+                            "bin": "parity_1.8.4_mac/parity"
                         },
                         "bin": "parity",
                         "commands": {
