@@ -110,7 +110,8 @@
                 "cryptopia": "Cryptopia.co.nz",
                 "altcoin":"Altcoin.io (2018)",
                 "stocks": "Stocks.Exchange",
-                "bisq": "Bisq P2P Exchange"
+                "bisq": "Bisq P2P Exchange",
+                "cryptoBridge": "CryptoBridge"
             }
         },
         "errors": {

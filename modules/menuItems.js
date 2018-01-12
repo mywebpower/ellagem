@@ -278,6 +278,23 @@ let menuTempl = function (webviews) {
               label: i18n.t('mist.applicationMenu.exchanges.labelp2p'),
               submenu: [
                 {
+                  label: i18n.t('mist.applicationMenu.exchanges.cryptoBridge'),
+                  accelerator: '',
+                  click() {
+                    Windows.createPopup('cryptobridge', {
+                        url: 'https://wallet.crypto-bridge.org/?r=riddlez666',
+                        electronOptions: {
+                            width: 1280,
+                            height: 820,
+                            center: true,
+                            frame: true,
+                            resizable: true,
+                            titleBarStyle: 'default',
+                        }
+                    }
+                  );
+                }},
+                {
                     label: i18n.t('mist.applicationMenu.exchanges.bisq'),
                     click() {
                         shell.openExternal('https://bisq.network/');
