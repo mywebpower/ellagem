@@ -285,7 +285,7 @@ class Settings {
         ipcPath = this.userHomePath;
 
         if (process.platform === 'darwin') {
-            ipcPath += '/Library/ellaism/mainnet/geth.ipc';
+            ipcPath += '/Library/Ellaism/mainnet/geth.ipc';
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
